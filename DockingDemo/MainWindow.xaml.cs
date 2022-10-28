@@ -1,0 +1,35 @@
+﻿using AvalonDock.Themes;
+using AvalonDock.Themes.VisualStudio;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Controls;
+
+namespace DockingDemo;
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow
+{
+    private static readonly List<Theme> Themes = new()
+        {
+            new VisualStudio2019Blue(),
+            new VisualStudio2019Dark(),
+            new VisualStudio2019Light(),
+            new VisualStudio2022Blue(),
+            new VisualStudio2022Dark(),
+            new VisualStudio2022Light()
+        };
+
+    public MainWindow()
+    {
+        InitializeComponent();
+    }
+
+    private void ThemeItem_Click(object sender, System.Windows.RoutedEventArgs e)
+    {
+        if (sender is MenuItem menuItem)
+        {
+            dockingManager.Theme = Themes[int.Parse((string)menuItem.Tag)];
+        }
+    }
+}
