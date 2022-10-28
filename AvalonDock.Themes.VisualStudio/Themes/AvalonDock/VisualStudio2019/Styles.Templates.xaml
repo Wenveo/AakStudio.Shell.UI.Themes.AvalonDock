@@ -457,7 +457,7 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="attach:GlowWindowAttach.IsEnabled" Value="True" />
+        <Setter Property="attach:GlowWindowAttach.GlowMode" Value="Auto" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorder}}" />
         <Setter Property="Template">
             <Setter.Value>

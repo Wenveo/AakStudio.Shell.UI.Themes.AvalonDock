@@ -1,102 +1,148 @@
 ﻿using AvalonDock.Themes.VisualStudio.Behaviors;
 using ControlzEx.Behaviors;
 using Microsoft.Xaml.Behaviors;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 
 namespace AvalonDock.Themes.VisualStudio.Controls.Attach
 {
+    public enum GlowMode
+    {
+        // Default Value
+        None,
+        Auto,
+        Custom,
+        ControlzEx
+    }
+
     public sealed class GlowWindowAttach
     {
+        private static bool IsWin11_Or_Latest => Environment.OSVersion.Version.Major >= 10 && Environment.OSVersion.Version.Build >= 22000;
+
         public static readonly DependencyProperty GlowBrushProperty =
             DependencyProperty.RegisterAttached(
                 "GlowBrush", typeof(SolidColorBrush), typeof(GlowWindowAttach), new PropertyMetadata(Brushes.Transparent, OnGlowBrushChanged));
 
-        public static readonly DependencyProperty IsEnabledProperty =
+        public static readonly DependencyProperty GlowModeProperty =
             DependencyProperty.RegisterAttached(
-                "IsEnabled", typeof(bool), typeof(GlowWindowAttach), new PropertyMetadata(false, OnIsEnabledChanged));
+                "GlowMode", typeof(GlowMode), typeof(GlowWindowAttach), new PropertyMetadata(GlowMode.None, OnGlowModeChanged));
 
         private static void OnGlowBrushChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is Window window)
             {
                 var behaviors = Interaction.GetBehaviors(window);
+                var glowMode = GetDefaultMode(GetGlowMode(window));
 
-                if (!WindowHepler.IsWin11_Or_Latest)
+                if (glowMode == GlowMode.Custom)
                 {
-                    var item = behaviors.FirstOrDefault(x => x.GetType() == typeof(VisualStudioGlowWindowBehavior));
-                    if (item != null && item is VisualStudioGlowWindowBehavior visualStudioGlowWindowBehavior)
-                    {
-                        visualStudioGlowWindowBehavior.ActiveGlowBrush = GetGlowBrush(d);
-                        visualStudioGlowWindowBehavior.InactiveGlowBrush = GetGlowBrush(d);
-                    }
+                    var visualStudioGlowWindowBehavior = GetOrAddCustomGlowWindowBehavior(behaviors);
+                    visualStudioGlowWindowBehavior.ActiveGlowBrush = GetGlowBrush(d);
+                    visualStudioGlowWindowBehavior.InactiveGlowBrush = GetGlowBrush(d);
                 }
-                else
+                else if (glowMode == GlowMode.ControlzEx)
                 {
-                    var item = behaviors.FirstOrDefault(x => x.GetType() == typeof(GlowWindowBehavior));
-                    if (item != null && item is GlowWindowBehavior glowWindowBehavior)
-                    {
-                        glowWindowBehavior.GlowColor = GetGlowBrush(d).Color;
-                        glowWindowBehavior.NonActiveGlowColor = GetGlowBrush(d).Color;
-                    }
+                    var glowWindowBehavior = GetOrAddGlowWindowBehavior(behaviors);
+                    glowWindowBehavior.GlowColor = GetGlowBrush(d).Color;
+                    glowWindowBehavior.NonActiveGlowColor = GetGlowBrush(d).Color;
                 }
+                
             }
         }
-        private static void OnIsEnabledChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+
+        private static void OnGlowModeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             if (d is Window window)
             {
-                var value = (bool)e.NewValue;
                 var behaviors = Interaction.GetBehaviors(window);
 
-                var glowWindowBehavior = behaviors.FirstOrDefault(x => x.GetType() ==
-                    (WindowHepler.IsWin11_Or_Latest ?
-                    typeof(VisualStudioGlowWindowBehavior) :
-                    typeof(GlowWindowBehavior)));
-
-                if (value == true && glowWindowBehavior == null)
+                var oldGlowMode = GetDefaultMode((GlowMode)e.OldValue);
+                if (oldGlowMode == GlowMode.Custom)
                 {
-                    if (!WindowHepler.IsWin11_Or_Latest)
-                    {
-                        glowWindowBehavior = new VisualStudioGlowWindowBehavior()
-                        {
-                            DoNotUseTimerTick = true
-                        };
-                    }
-                    else
-                    {
-                        glowWindowBehavior = new GlowWindowBehavior();
-                    }
-                    Interaction.GetBehaviors(window).Add(glowWindowBehavior);
-                    return;
+                    behaviors.Remove(GetCustomGlowWindowBehavior(behaviors));
+                }
+                else if (oldGlowMode == GlowMode.ControlzEx)
+                {
+                    behaviors.Remove(GetGlowWindowBehavior(behaviors));
                 }
 
-                if (value == false && glowWindowBehavior != null)
+
+                var newGlowMode = GetDefaultMode((GlowMode)e.NewValue);
+                if (newGlowMode == GlowMode.Custom)
                 {
-                    behaviors.Remove(glowWindowBehavior);
+                    GetOrAddCustomGlowWindowBehavior(behaviors);
+                }
+                else if (newGlowMode == GlowMode.ControlzEx)
+                {
+                    GetOrAddGlowWindowBehavior(behaviors);
                 }
             }
         }
 
+        private static GlowWindowBehavior? GetGlowWindowBehavior(BehaviorCollection behaviors)
+        {
+            return (GlowWindowBehavior?)behaviors.FirstOrDefault(x => x.GetType() == typeof(GlowWindowBehavior));
+        }
+
+        private static GlowWindowBehavior GetOrAddGlowWindowBehavior(BehaviorCollection behaviors)
+        {
+            var glowWindowBehavior = GetGlowWindowBehavior(behaviors);
+            if (glowWindowBehavior == null)
+            {
+                glowWindowBehavior ??= new GlowWindowBehavior()
+                {
+                    GlowDepth = 1
+                };
+                behaviors.Add(glowWindowBehavior);
+            }
+            return glowWindowBehavior;
+        }
+
+        private static VisualStudioGlowWindowBehavior? GetCustomGlowWindowBehavior(BehaviorCollection behaviors)
+        {
+            return (VisualStudioGlowWindowBehavior?)behaviors.FirstOrDefault(x => x.GetType() == typeof(VisualStudioGlowWindowBehavior));
+        }
+
+        private static VisualStudioGlowWindowBehavior GetOrAddCustomGlowWindowBehavior(BehaviorCollection behaviors)
+        {
+            var glowWindowBehavior = GetCustomGlowWindowBehavior(behaviors);
+            if (glowWindowBehavior == null)
+            {
+                glowWindowBehavior ??= new VisualStudioGlowWindowBehavior()
+                {
+                    DoNotUseTimerTick = true
+                };
+                behaviors.Add(glowWindowBehavior);
+            }
+
+            return glowWindowBehavior;
+        }
+
+        private static GlowMode GetDefaultMode(GlowMode glowMode)
+        {
+            return glowMode == GlowMode.Auto ? (IsWin11_Or_Latest ? GlowMode.ControlzEx : GlowMode.Custom) : glowMode;
+        }
 
         public static SolidColorBrush GetGlowBrush(DependencyObject element)
         {
             return (SolidColorBrush)element.GetValue(GlowBrushProperty);
         }
+
         public static void SetGlowBrush(DependencyObject element, SolidColorBrush value)
         {
             element.SetValue(GlowBrushProperty, value);
         }
 
-        public static bool GetIsEnabled(DependencyObject element)
+        public static GlowMode GetGlowMode(DependencyObject element)
         {
-            return (bool)element.GetValue(IsEnabledProperty);
+            return (GlowMode)element.GetValue(GlowModeProperty);
         }
 
-        public static void SetIsEnabled(DependencyObject element, bool value)
+        public static void SetGlowMode(DependencyObject element, GlowMode value)
         {
-            element.SetValue(IsEnabledProperty, value);
+            element.SetValue(GlowModeProperty, value);
         }
     }
 }

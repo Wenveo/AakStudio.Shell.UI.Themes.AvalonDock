@@ -4,8 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controlz="urn:controlzex"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:local="clr-namespace:DockingDemo"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=AvalonDock"
     Title="MainWindow"
     Width="1280"
     Height="720"
@@ -16,7 +18,12 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Margin="2,4">
+        <Menu
+            Grid.Row="0"
+            Margin="2,4"
+            HorizontalAlignment="Left"
+            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+            Background="Transparent">
             <MenuItem Header="File">
                 <MenuItem Header="New" />
                 <MenuItem Header="Open" />

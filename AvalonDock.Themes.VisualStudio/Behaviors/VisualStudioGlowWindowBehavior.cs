@@ -441,6 +441,8 @@ namespace AvalonDock.Themes.VisualStudio.Behaviors
 
         private void WmSysCommand(IntPtr hWnd, IntPtr wParam)
         {
+            if (AssociatedObject == null) return;
+
             var num = InteropMethods.GET_SC_WPARAM(wParam);
 
             if (num == InteropValues.ScMove)
