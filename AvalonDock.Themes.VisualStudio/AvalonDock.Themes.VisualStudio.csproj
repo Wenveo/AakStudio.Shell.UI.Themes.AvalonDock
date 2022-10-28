@@ -1,14 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+	<PropertyGroup>
     <TargetFrameworks>net462;netcoreapp3.1;net5.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <LangVersion>9.0</LangVersion>
+    <Version>4.70.2-beta1028</Version>
+    <AssemblyVersion>4.70.2</AssemblyVersion>
+    <FileVersion>4.70.2</FileVersion>
+    <PackageVersion>4.70.2</PackageVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Noisrev</Authors>
+    <Company>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</Company>
+    <Description>Visual Studio Themes of AvalonDock.(Visual Studio 2019+ Themes)</Description>
+    <Copyright>Copyright © 2022</Copyright>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</RepositoryUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
+	
   <ItemGroup>
     <Resource Include="Resources\Images\GlowWindow\*.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
