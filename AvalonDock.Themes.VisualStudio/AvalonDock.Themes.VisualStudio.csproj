@@ -12,7 +12,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</Company>
-    <Description>Visual Studio (2019+) Themes of AvalonDock.</Description>
+    <Description>Visual Studio (2019+) Themes for AvalonDock.</Description>
     <Copyright>Copyright © 2022</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</RepositoryUrl>
