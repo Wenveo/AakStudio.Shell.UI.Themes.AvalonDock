@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvalonDock.Themes.VisualStudio", "AvalonDock.Themes.VisualStudio\AvalonDock.Themes.VisualStudio.csproj", "{AC07424F-9933-4275-BA15-567AEF83B347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockingDemo", "DockingDemo\DockingDemo.csproj", "{4F3445E9-77CF-4038-BCFA-315B72291380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockingDemo", "DockingDemo\DockingDemo.csproj", "{4F3445E9-77CF-4038-BCFA-315B72291380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

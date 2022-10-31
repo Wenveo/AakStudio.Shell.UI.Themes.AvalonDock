@@ -1,16 +1,13 @@
 ﻿<Window
     x:Class="DockingDemo.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:controlz="urn:controlzex"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" BorderThickness="0"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:local="clr-namespace:DockingDemo"
+    xmlns:local="clr-namespace:DockingDemo" xmlns:controlz="urn:controlzex"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=AvalonDock"
     Title="MainWindow"
-    Width="1280"
-    Height="720"
+    Width="1280" GlowWindowAttach.GlowMode="ControlzEx"
+    Height="720" WindowChromeAttach.IsEnabled="True"
     UseLayoutRounding="True"
     mc:Ignorable="d">
     <Grid>
@@ -19,10 +16,11 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu
-            Grid.Row="0"
-            Margin="2,4"
+            Grid.Row="0" controlz:WindowChrome.IsHitTestVisibleInChrome="True"
+            
+            Margin="2,4" 
             HorizontalAlignment="Left"
-            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+            
             Background="Transparent">
             <MenuItem Header="File">
                 <MenuItem Header="New" />

@@ -1021,7 +1021,9 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="attach:GlowWindowAttach.GlowMode" Value="Auto" />
+        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True"/>
+        <Setter Property="attach:WindowChromeAttach.ResizeBorderThickness" Value="7"/>
+        <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorderInactive}}" />
         <Setter Property="Template">
             <Setter.Value>
@@ -1396,32 +1398,6 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding Source={x:Static WindowHepler.IsWin11_Or_Latest}}" Value="True">
-                <Setter Property="shell:WindowChrome.WindowChrome">
-                    <Setter.Value>
-                        <shell:WindowChrome
-                            CaptionHeight="21"
-                            CornerRadius="0"
-                            GlassFrameThickness="0,1,0,0"
-                            ResizeBorderThickness="10"
-                            ShowSystemMenu="False" />
-                    </Setter.Value>
-                </Setter>
-            </DataTrigger>
-            <DataTrigger Binding="{Binding Source={x:Static WindowHepler.IsWin11_Or_Latest}}" Value="False">
-                <Setter Property="shell:WindowChrome.WindowChrome">
-                    <Setter.Value>
-                        <shell:WindowChrome
-                            CaptionHeight="21"
-                            CornerRadius="0"
-                            GlassFrameThickness="0"
-                            ResizeBorderThickness="10"
-                            ShowSystemMenu="False" />
-                    </Setter.Value>
-                </Setter>
-            </DataTrigger>
-        </Style.Triggers>
     </Style>
 
     <Style x:Key="{x:Type avalonDockControls:LayoutAutoHideWindowControl}" TargetType="{x:Type avalonDockControls:LayoutAutoHideWindowControl}">

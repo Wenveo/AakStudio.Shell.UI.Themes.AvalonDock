@@ -28,16 +28,6 @@ public partial class MainWindow
     public MainWindow()
     {
         InitializeComponent();
-
-        GlowWindowAttach.SetGlowMode(this, GlowMode.Auto);
-        WindowChrome.SetWindowChrome(this, new WindowChrome()
-        {
-            CaptionHeight = 24,
-            CornerRadius = new CornerRadius(0),
-            GlassFrameThickness = new Thickness(0, Convert.ToDouble(WindowHepler.IsWin11_Or_Latest), 0, 0),
-            ResizeBorderThickness = new Thickness(0),
-            ShowSystemMenu = false
-        });
     }
 
     protected override void OnActivated(EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using AvalonDock.Controls;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -19,6 +20,26 @@ namespace AvalonDock.Themes.VisualStudio.Controls
         DockRight,
         DockBottom
     }
+
+    internal partial class NativeMethods
+    {
+        [StructLayout(LayoutKind.Sequential)]
+        internal struct Point
+        {
+            public int X;
+            public int Y;
+        }
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        internal static extern bool GetCursorPos(out Point pt);
+
+        internal static System.Windows.Point GetMousePosition()
+        {
+            GetCursorPos(out var pos);
+            return new System.Windows.Point(pos.X, pos.Y);
+        }
+    }
+
 
     public class DockTargetButton : Button
     {
@@ -154,7 +175,7 @@ namespace AvalonDock.Themes.VisualStudio.Controls
             {
                 foreach (var item in DockTargets)
                 {
-                    var pos = item.PointFromScreen(Helpers.Interop.InteropMethods.GetMousePosition());
+                    var pos = item.PointFromScreen(NativeMethods.GetMousePosition());
                     var size = item.RenderSize;
                     // 2022.10.27 - Fix the size to show
                     size.Width += 2;
