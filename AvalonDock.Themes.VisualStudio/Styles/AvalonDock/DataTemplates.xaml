@@ -1,0 +1,32 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock">
+
+    <DataTemplate x:Key="DocumentWellHeaderTemplate">
+        <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="DocumentWellTitleTemplate">
+        <TextBlock
+            VerticalAlignment="Center"
+            Text="{Binding Title}"
+            TextTrimming="CharacterEllipsis" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ToolWellHeaderTemplate">
+        <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ToolWellTitleTemplate">
+        <TextBlock
+            VerticalAlignment="Center"
+            Text="{Binding Title}"
+            TextTrimming="CharacterEllipsis" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ToolWellIconContentTemplate">
+        <Image Source="{Binding IconSource, Converter={avalonDockConverters:NullToDoNothingConverter}}" Stretch="Uniform" />
+    </DataTemplate>
+
+</ResourceDictionary>

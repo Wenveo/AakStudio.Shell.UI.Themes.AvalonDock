@@ -2,14 +2,12 @@
 using Microsoft.Xaml.Behaviors;
 using System.Linq;
 using System.Windows;
+using System.Windows.Shapes;
 
 namespace AvalonDock.Themes.VisualStudio.Controls.Attach
 {
     public sealed class WindowChromeAttach
     {
-        private static readonly object _lock = new();
-        private static bool _isInitialize = false;
-
         public static readonly DependencyProperty IsEnabledProperty =
             DependencyProperty.RegisterAttached(
                 "IsEnabled", typeof(bool), typeof(WindowChromeAttach), new PropertyMetadata(false, OnIsEnabledChanged));
@@ -46,15 +44,17 @@ namespace AvalonDock.Themes.VisualStudio.Controls.Attach
 
                 if ((bool)e.NewValue)
                 {
-                    _isInitialize = false;
-
-                    // Clear AvalonDock WindowChrome
-                    Microsoft.Windows.Shell.WindowChrome.SetWindowChrome(window, null);
-
-                    // Clear System WindowChrome
-                    System.Windows.Shell.WindowChrome.SetWindowChrome(window, null);
-
-                    //window.WindowStyle = WindowStyle.None;
+                    var typeName = window.GetType().FullName;
+                    if (typeName.StartsWith("AvalonDock.Controls"))
+                    {
+                        // Clear AvalonDock WindowChrome
+                        Microsoft.Windows.Shell.WindowChrome.SetWindowChrome(window, null);
+                    }
+                    else
+                    {
+                        // Clear System WindowChrome
+                        System.Windows.Shell.WindowChrome.SetWindowChrome(window, null);
+                    }
 
                     // Initialize Default Value
                     var windowChromeBehavior = GetOrAddWindowChromeBehavior(behaviors);
@@ -64,81 +64,55 @@ namespace AvalonDock.Themes.VisualStudio.Controls.Attach
                     SetIgnoreTaskbarOnMaximize(window, windowChromeBehavior.IgnoreTaskbarOnMaximize);
                     SetKeepBorderOnMaximize(window, windowChromeBehavior.KeepBorderOnMaximize);
                     SetResizeBorderThickness(window, windowChromeBehavior.ResizeBorderThickness);
-
-                    _isInitialize = true;
-                }
-                else
-                {
-                    behaviors.Remove(GetWindowChromeBehavior(behaviors));
                 }
             }
         }
 
         private static void OnCornerPreferenceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window))
-                        .CornerPreference = (WindowCornerPreference)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).CornerPreference = (WindowCornerPreference)e.NewValue;
             }
         }
 
         private static void OnEnableMaxRestoreChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window))
-                        .EnableMaxRestore = (bool)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).EnableMaxRestore = (bool)e.NewValue;
             }
         }
 
         private static void OnEnableMinimizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).EnableMinimize = (bool)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).EnableMinimize = (bool)e.NewValue;
             }
         }
 
         private static void OnIgnoreTaskbarOnMaximizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).IgnoreTaskbarOnMaximize = (bool)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).IgnoreTaskbarOnMaximize = (bool)e.NewValue;
             }
         }
 
         private static void OnKeepBorderOnMaximizeChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).KeepBorderOnMaximize = (bool)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).KeepBorderOnMaximize = (bool)e.NewValue;
             }
         }
 
         private static void OnResizeBorderThicknessChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            lock (_lock)
+            if (d is Window window)
             {
-                if (_isInitialize && d is Window window)
-                {
-                    GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).ResizeBorderThickness = (Thickness)e.NewValue;
-                }
+                GetOrAddWindowChromeBehavior(Interaction.GetBehaviors(window)).ResizeBorderThickness = (Thickness)e.NewValue;
             }
         }
 

@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
+    <PropertyGroup>
     <TargetFrameworks>net462;netcoreapp3.1;net6.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <LangVersion>9.0</LangVersion>
-    <Version>4.70.2</Version>
-    <AssemblyVersion>4.70.2</AssemblyVersion>
-    <FileVersion>4.70.2</FileVersion>
-    <PackageVersion>4.70.2-beta1028</PackageVersion>
+    <Version>4.70.3</Version>
+    <AssemblyVersion>4.70.3</AssemblyVersion>
+    <FileVersion>4.70.3</FileVersion>
+    <PackageVersion>4.70.3-beta1028</PackageVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</Company>
@@ -19,6 +19,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,10 +35,19 @@
 
   <ItemGroup>
     <PackageReference Include="ControlzEx" Version="6.0.0-alpha0241" />
-    <PackageReference Include="Dirkster.AvalonDock" Version="4.70.2" />
+    <!--<PackageReference Include="Dirkster.AvalonDock" Version="4.70.3" />-->
+    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.2.164-beta">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
     
   <ItemGroup Condition=" '$(TargetFramework.StartsWith(net4))' == 'true' ">
     <Reference Include="PresentationFramework.Aero" />
   </ItemGroup>
+    
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Forks\AvalonDock\source\Components\AvalonDock\AvalonDock.csproj" />
+  </ItemGroup>
+
 </Project>

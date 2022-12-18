@@ -1,0 +1,69 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock"
+    xmlns:avalonDockProperties="clr-namespace:AvalonDock.Properties;assembly=AvalonDock"
+    xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes">
+
+    <PathGeometry x:Key="Path_HorizontalTabGroup" Figures="M 2.53856,7.38456L 2.53856,12.3846L 31.9231,12.3846L 31.9231,7.38456L 2.53856,7.38456 Z M 0,0.000162761L 34.3846,0.000162761L 34.3846,14.7694L 0,14.7694L 0,0.000162761 Z M 2.53861,24.6155L 2.53861,29.6155L 31.9232,29.6155L 31.9232,24.6155L 2.53861,24.6155 Z M 5.00801e-005,17.2309L 34.3846,17.2309L 34.3846,32.0001L 5.00801e-005,32.0001L 5.00801e-005,17.2309 Z " />
+    <PathGeometry x:Key="Path_VerticalTabGroup" Figures="M 64,0.000223796L 101.319,0.000223796L 101.319,32.0002L 64,32.0002L 64,0.000223796 Z M 66.6804,8.03752L 66.6804,29.3154L 79.896,29.3154L 79.896,8.03752L 66.6804,8.03752 Z M 85.4232,8.03746L 85.4232,29.3154L 98.6388,29.3154L 98.6388,8.03746L 85.4232,8.03746 Z " />
+
+    <ContextMenu x:Key="DocumentWellContextMenu">
+        <MenuItem
+            Command="{Binding Path=CloseCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Document_Close}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}" />
+        <MenuItem Command="{Binding Path=CloseAllButThisCommand}" Header="{x:Static avalonDockProperties:Resources.Document_CloseAllButThis}" />
+        <MenuItem Command="{Binding Path=CloseAllCommand}" Header="{x:Static avalonDockProperties:Resources.Document_CloseAll}" />
+        <MenuItem Command="{Binding Path=FloatCommand}" Header="{x:Static avalonDockProperties:Resources.Document_Float}" />
+        <MenuItem Command="{Binding Path=DockAsDocumentCommand}" Header="{x:Static avalonDockProperties:Resources.Document_DockAsDocument}" />
+        <MenuItem
+            Command="{Binding Path=NewHorizontalTabGroupCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Document_NewHorizontalTabGroup}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}">
+            <MenuItem.Icon>
+                <Path
+                    Width="14"
+                    Height="14"
+                    VerticalAlignment="Center"
+                    Data="{DynamicResource Path_HorizontalTabGroup}"
+                    Fill="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabMenuItemGlyph}}"
+                    Stretch="Uniform" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem
+            Command="{Binding Path=NewVerticalTabGroupCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Document_NewVerticalTabGroup}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}">
+            <MenuItem.Icon>
+                <Path
+                    Width="14"
+                    Height="14"
+                    VerticalAlignment="Center"
+                    Data="{DynamicResource Path_VerticalTabGroup}"
+                    Fill="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabMenuItemGlyph}}"
+                    Stretch="Uniform" />
+            </MenuItem.Icon>
+        </MenuItem>
+        <MenuItem
+            Command="{Binding Path=MoveToNextTabGroupCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Document_MoveToNextTabGroup}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}" />
+        <MenuItem
+            Command="{Binding Path=MoveToPreviousTabGroupCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Document_MoveToPreviousTabGroup}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}" />
+    </ContextMenu>
+
+    <ContextMenu x:Key="ToolWellContextMenu">
+        <MenuItem Command="{Binding Path=FloatCommand}" Header="{x:Static avalonDockProperties:Resources.Anchorable_Float}" />
+        <MenuItem Command="{Binding Path=DockCommand}" Header="{x:Static avalonDockProperties:Resources.Anchorable_Dock}" />
+        <MenuItem Command="{Binding Path=DockAsDocumentCommand}" Header="{x:Static avalonDockProperties:Resources.Anchorable_DockAsDocument}" />
+        <MenuItem Command="{Binding Path=AutoHideCommand}" Header="{x:Static avalonDockProperties:Resources.Anchorable_AutoHide}" />
+        <MenuItem
+            Command="{Binding Path=HideCommand}"
+            Header="{x:Static avalonDockProperties:Resources.Anchorable_Hide}"
+            Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}" />
+    </ContextMenu>
+
+</ResourceDictionary>

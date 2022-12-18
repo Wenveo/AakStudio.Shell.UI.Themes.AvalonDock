@@ -1,13 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/AvalonDock/VisualStudio2019/DarkBrushs.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/AvalonDock/VisualStudio2019/Styles.Templates.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/VisualStudio2019/Styles.Templates.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <SolidColorBrush x:Key="ContextMenuBackground" Color="#FF1B1B1C" />
     <SolidColorBrush x:Key="ContextMenuBorderBrush" Color="#FF333337" />
     <SolidColorBrush x:Key="ContextMenuRectangleFill" Color="#FF1B1B1C" />
 
+    <SolidColorBrush x:Key="TabItemForeground" Color="#FFF1F1F1" />
     <SolidColorBrush x:Key="TabItemStaticBackground" Color="#002D2D30" />
     <SolidColorBrush x:Key="TabItemStaticBorder" Color="#002D2D30" />
     <SolidColorBrush x:Key="TabItemStaticInBorder" Color="#002D2D30" />

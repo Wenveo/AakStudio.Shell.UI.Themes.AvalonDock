@@ -72,7 +72,8 @@ namespace AvalonDock.Themes.VisualStudio.Controls.Attach
             {
                 glowWindowBehavior ??= new GlowWindowBehavior()
                 {
-                    GlowDepth = 1
+                    GlowDepth = 1,
+                    IsGlowTransitionEnabled = true
                 };
                 behaviors.Add(glowWindowBehavior);
             }

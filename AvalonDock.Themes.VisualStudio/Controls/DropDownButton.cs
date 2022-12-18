@@ -8,11 +8,14 @@
  ************************************************************************/
 
 using AvalonDock.Controls;
+using AvalonDock.Layout;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using System.Windows.Interop;
 
 namespace AvalonDock.Themes.VisualStudio.Controls
 {
@@ -82,14 +85,26 @@ namespace AvalonDock.Themes.VisualStudio.Controls
             if (DropDownContextMenu != null)
             {
                 /* Active Item */
-                if (TemplatedParent is AnchorablePaneTitle anchorablePaneTitle)
+                if (TemplatedParent is LayoutAnchorableFloatingWindowControl fwc &&
+                    fwc.Model is LayoutAnchorableFloatingWindow fw &&
+                    fw.SinglePane is LayoutAnchorablePane ap)
                 {
-                    anchorablePaneTitle.Model.IsActive = true;
+                    ap.SelectedContent.IsActive = true;
                 }
+                else if (TemplatedParent is LayoutDocumentPaneControl dpc && dpc.Model is LayoutDocumentPane dp)
+                {
+                    dp.SelectedContent.IsActive = true;
+                }
+                else if (TemplatedParent is AnchorablePaneTitle apt)
+                {
+                    apt.Model.IsActive = true;
+                }
+
                 DropDownContextMenu.PlacementTarget = this;
                 DropDownContextMenu.Placement = PlacementMode.Bottom;
                 DropDownContextMenu.DataContext = DropDownContextMenuDataContext;
                 DropDownContextMenu.Closed += OnContextMenuClosed;
+                Debug.WriteLine(DropDownContextMenu.IsOpen);
                 DropDownContextMenu.IsOpen = true;
 
                 /* Focus */

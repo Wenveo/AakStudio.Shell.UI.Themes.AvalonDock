@@ -1,0 +1,6 @@
+﻿GetCursorPos
+GetDeviceCaps
+GetDC
+ReleaseDC
+SetWindowPos
+ShowWindow

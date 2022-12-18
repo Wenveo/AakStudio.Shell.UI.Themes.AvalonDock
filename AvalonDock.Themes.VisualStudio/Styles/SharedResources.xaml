@@ -11,8 +11,8 @@
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes"
     xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=AvalonDock">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/DockTargetButton.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/MenuStyle.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/DockTargetButton.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/MenuStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <PathGeometry x:Key="Path_PinAutoHide" Figures="M 128,17.475L 130.842,17.475L 130.842,2.91001L 130.842,0.608195L 130.842,0.000223796L 139.593,0.000223796L 145.003,0.000223796L 145.424,0.000223796L 145.424,17.475L 148.413,17.475L 148.413,20.3848L 139.684,20.3848L 139.684,32.0003L 136.752,32.0003L 136.752,20.3848L 128,20.3848L 128,17.475 Z M 133.774,2.91007L 133.774,17.475L 139.593,17.475L 139.593,2.91007L 133.774,2.91007 Z" />
@@ -1021,10 +1021,11 @@
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True"/>
-        <Setter Property="attach:WindowChromeAttach.ResizeBorderThickness" Value="7"/>
+        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True" />
         <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorderInactive}}" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="OwnedByDockingManagerWindow" Value="False" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}">
@@ -1043,6 +1044,7 @@
                                 <Border
                                     x:Name="Header"
                                     Padding="2,2,3,3"
+                                    controlz:NonClientControlProperties.HitTestResult="CAPTION"
                                     Background="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionInactiveBackground}}"
                                     TextElement.Foreground="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionInactiveText}}">
                                     <Grid UseLayoutRounding="True">
@@ -1113,7 +1115,9 @@
                                             Margin="1,1,1,0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
-                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            controlz:NonClientControlProperties.ClickStrategy="MouseEvent"
+                                            controlz:NonClientControlProperties.HitTestResult="SYSMENU"
+                                            controlz:WindowChrome.IsHitTestVisibleInChrome="True"
                                             DropDownContextMenu="{Binding Model.Root.Manager.AnchorableContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
                                             DropDownContextMenuDataContext="{Binding Path=SingleContentLayoutItem, RelativeSource={RelativeSource TemplatedParent}}"
                                             Focusable="False"
@@ -1138,7 +1142,8 @@
                                             Margin="0,1,1,0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
-                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            controlz:NonClientControlProperties.ClickStrategy="AutomationPeer"
+                                            controlz:NonClientControlProperties.HitTestResult="MAXBUTTON"
                                             Command="{x:Static shell:SystemCommands.MaximizeWindowCommand}"
                                             CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}"
                                             Focusable="False"
@@ -1163,7 +1168,8 @@
                                             Margin="0,1,1,0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
-                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            controlz:NonClientControlProperties.ClickStrategy="AutomationPeer"
+                                            controlz:NonClientControlProperties.HitTestResult="MAXBUTTON"
                                             Command="{x:Static shell:SystemCommands.RestoreWindowCommand}"
                                             CommandParameter="{Binding RelativeSource={RelativeSource TemplatedParent}}"
                                             Focusable="False"
@@ -1189,7 +1195,8 @@
                                             Margin="0,1,1,0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
-                                            shell:WindowChrome.IsHitTestVisibleInChrome="True"
+                                            controlz:NonClientControlProperties.ClickStrategy="AutomationPeer"
+                                            controlz:NonClientControlProperties.HitTestResult="CLOSE"
                                             Command="{Binding HideWindowCommand, RelativeSource={RelativeSource TemplatedParent}}"
                                             Focusable="False"
                                             Style="{StaticResource AvalonDockButtonStyle}"
@@ -1213,7 +1220,6 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="WindowState" Value="Maximized">
-                            <Setter TargetName="WindowBorder" Property="Padding" Value="8" />
                             <Setter TargetName="WindowBorder" Property="BorderThickness" Value="0" />
                         </Trigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Model.SinglePane.SelectedContent.IsActive}" Value="True">
@@ -1230,6 +1236,15 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsMouseOver, ElementName=SinglePaneContextMenu}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="SinglePaneContextMenu" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBackground}}" />
+                            <Setter TargetName="SinglePaneContextMenu" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBorder}}" />
+                            <Setter TargetName="PART_ImgPinMenu" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredGlyph}}" />
+                        </MultiDataTrigger>
+                        <!--  Document Well : Tab : Button / Selected, inactive, hovered  -->
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Path=(controlz:NonClientControlProperties.IsNCMouseOver), ElementName=SinglePaneContextMenu}" Value="True" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="SinglePaneContextMenu" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBackground}}" />
                             <Setter TargetName="SinglePaneContextMenu" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBorder}}" />
