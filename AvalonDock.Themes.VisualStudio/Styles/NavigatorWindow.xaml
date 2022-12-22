@@ -7,6 +7,21 @@
     xmlns:avalonDockProperties="clr-namespace:AvalonDock.Properties;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes">
 
+    <DataTemplate x:Key="NavigatorWindowListBoxItemDataTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding LayoutElement.IconSource, Converter={avalonDockConverters:NullToDoNothingConverter}}" Stretch="None" />
+            <TextBlock
+                Grid.Column="1"
+                Margin="4,0,0,0"
+                Text="{Binding LayoutElement.Title}"
+                TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </DataTemplate>
+
     <Style x:Key="NavigatorWindowListBoxItemFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -145,25 +160,9 @@
                                             Background="Transparent"
                                             BorderThickness="0"
                                             ItemContainerStyle="{StaticResource NavigatorWindowListBoxItemStyle}"
+                                            ItemTemplate="{StaticResource NavigatorWindowListBoxItemDataTemplate}"
                                             ItemsSource="{Binding Anchorables}"
-                                            SelectedItem="{Binding SelectedAnchorable, Mode=TwoWay}">
-                                            <ListBox.ItemTemplate>
-                                                <DataTemplate>
-                                                    <Grid>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="16" />
-                                                            <ColumnDefinition Width="150" />
-                                                        </Grid.ColumnDefinitions>
-                                                        <Image Source="{Binding LayoutElement.IconSource, Converter={avalonDockConverters:NullToDoNothingConverter}}" Stretch="None" />
-                                                        <TextBlock
-                                                            Grid.Column="1"
-                                                            Margin="4,0,0,0"
-                                                            Text="{Binding LayoutElement.Title}"
-                                                            TextTrimming="CharacterEllipsis" />
-                                                    </Grid>
-                                                </DataTemplate>
-                                            </ListBox.ItemTemplate>
-                                        </ListBox>
+                                            SelectedItem="{Binding SelectedAnchorable, Mode=TwoWay}" />
                                     </Grid>
                                     <Grid Grid.Column="1" Margin="5">
                                         <Grid.RowDefinitions>
@@ -183,24 +182,9 @@
                                             Background="Transparent"
                                             BorderThickness="0"
                                             ItemContainerStyle="{StaticResource NavigatorWindowListBoxItemStyle}"
+                                            ItemTemplate="{StaticResource NavigatorWindowListBoxItemDataTemplate}"
                                             ItemsSource="{Binding Documents}"
                                             SelectedItem="{Binding SelectedDocument, Mode=TwoWay}">
-                                            <ListBox.ItemTemplate>
-                                                <DataTemplate>
-                                                    <Grid>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="16" />
-                                                            <ColumnDefinition Width="150" />
-                                                        </Grid.ColumnDefinitions>
-                                                        <Image Source="{Binding LayoutElement.IconSource, Converter={avalonDockConverters:NullToDoNothingConverter}}" Stretch="None" />
-                                                        <TextBlock
-                                                            Grid.Column="1"
-                                                            Margin="4,0,0,0"
-                                                            Text="{Binding LayoutElement.Title}"
-                                                            TextTrimming="CharacterEllipsis" />
-                                                    </Grid>
-                                                </DataTemplate>
-                                            </ListBox.ItemTemplate>
                                             <ListBox.ItemsPanel>
                                                 <ItemsPanelTemplate>
                                                     <WrapPanel Orientation="Vertical" />
