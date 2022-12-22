@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvalonDock.Themes.VisualStu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockingDemo", "DockingDemo\DockingDemo.csproj", "{4F3445E9-77CF-4038-BCFA-315B72291380}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvalonDock", "..\..\Forks\AvalonDock\source\Components\AvalonDock\AvalonDock.csproj", "{F84E6360-836F-4925-BB56-F59F46AB7E9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvalonDock", "..\AvalonDock\source\Components\AvalonDock\AvalonDock.csproj", "{B88D0316-E102-4A55-A68B-AA18A542289D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{4F3445E9-77CF-4038-BCFA-315B72291380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F3445E9-77CF-4038-BCFA-315B72291380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F3445E9-77CF-4038-BCFA-315B72291380}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F84E6360-836F-4925-BB56-F59F46AB7E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F84E6360-836F-4925-BB56-F59F46AB7E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F84E6360-836F-4925-BB56-F59F46AB7E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F84E6360-836F-4925-BB56-F59F46AB7E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B88D0316-E102-4A55-A68B-AA18A542289D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B88D0316-E102-4A55-A68B-AA18A542289D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B88D0316-E102-4A55-A68B-AA18A542289D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B88D0316-E102-4A55-A68B-AA18A542289D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

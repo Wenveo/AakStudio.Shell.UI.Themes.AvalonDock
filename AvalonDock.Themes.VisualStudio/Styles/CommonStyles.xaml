@@ -2,31 +2,25 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonDock="clr-namespace:AvalonDock;assembly=AvalonDock"
-    xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/AutoHideChannel.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ContextMenus.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DataTemplates.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DockTargetButton.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DocumentWellPaneItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/GridResizerControl.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/NavigatorWindow.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/OverlayWindow.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellAnchor.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellAnchorGroup.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellAnchorSide.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellPaneControl.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellPaneItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellWindow.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AutoHideChannel.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ContextMenus.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/DataTemplates.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/DockTargetButton.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/DocumentWellPaneItem.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/GridResizerControl.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/NavigatorWindow.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/OverlayWindow.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellAnchor.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellAnchorGroup.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellAnchorSide.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellItem.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellPaneControl.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellPaneItem.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/ToolWellWindow.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <Style
-        x:Key="{x:Type avalonDockControls:ContextMenuEx}"
-        BasedOn="{StaticResource {x:Type ContextMenu}}"
-        TargetType="{x:Type avalonDockControls:ContextMenuEx}" />
 
     <Style x:Key="{x:Type avalonDock:DockingManager}" TargetType="{x:Type avalonDock:DockingManager}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
