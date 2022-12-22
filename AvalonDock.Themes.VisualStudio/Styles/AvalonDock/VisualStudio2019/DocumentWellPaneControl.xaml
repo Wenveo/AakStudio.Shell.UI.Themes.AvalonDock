@@ -3,74 +3,67 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock"
-    xmlns:ctrls="clr-namespace:AvalonDock.Themes.VisualStudio.Controls"
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes">
-    <ResourceDictionary.MergedDictionaries>
 
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/MenuStyle.xaml" />
-
-    </ResourceDictionary.MergedDictionaries>
-
-    <PathGeometry x:Key="PinDocMenu" Figures="M 352.041,32.0005L 320,0.000162761L 384,0.000162761L 352.041,32.0005 Z " />
-
-    <Style x:Key="DocumentWellPaneDropDownButtonBaseStyle" TargetType="{x:Type ctrls:DropDownButton}">
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="Height" Value="16" />
-        <Setter Property="Width" Value="16" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="VerticalAlignment" Value="Bottom" />
-        <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonDefaultGlyph}}" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ctrls:DropDownButton}">
-                    <Border
-                        x:Name="border"
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        SnapsToDevicePixels="true">
-                        <ContentPresenter
-                            x:Name="contentPresenter"
-                            Margin="{TemplateBinding Padding}"
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Focusable="False"
-                            RecognizesAccessKey="True"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBackground}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBorder}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredGlyph}}" />
-                        </Trigger>
-
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBackground}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBorder}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedGlyph}}" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
+    <PathGeometry x:Key="Path_DocumentWellPaneControl_DropDownMenu" Figures="M 608,0.000223796L 640,0.000223796L 640,7.70652L 608,7.70652L 608,0.000223796 Z M 624.021,32.0002L 608,16.0001L 640,16.0001L 624.021,32.0002 Z " />
 
     <Style x:Key="DocumentWellPaneControlBaseStyle" TargetType="{x:Type avalonDockControls:LayoutDocumentPaneControl}">
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="BorderBrush" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabBackground}}" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutDocumentPaneControl}">
+                    <ControlTemplate.Resources>
+                        <Style x:Key="DocumentWellPaneDropDownButtonBaseStyle" TargetType="{x:Type avalonDockControls:DropDownButton}">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="1" />
+                            <Setter Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="Height" Value="16" />
+                            <Setter Property="Width" Value="16" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                            <Setter Property="VerticalAlignment" Value="Bottom" />
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonDefaultGlyph}}" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type avalonDockControls:DropDownButton}">
+                                        <Border
+                                            x:Name="border"
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            SnapsToDevicePixels="true">
+                                            <ContentPresenter
+                                                x:Name="contentPresenter"
+                                                Margin="{TemplateBinding Padding}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                Focusable="False"
+                                                RecognizesAccessKey="True"
+                                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBackground}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBorder}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredGlyph}}" />
+                                            </Trigger>
+                                            <Trigger Property="IsChecked" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBackground}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBorder}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedGlyph}}" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ControlTemplate.Resources>
                     <Grid
                         ClipToBounds="true"
                         KeyboardNavigation.TabNavigation="Local"
@@ -84,7 +77,6 @@
                         <Grid
                             Grid.Row="0"
                             Margin="1,0"
-                            Panel.ZIndex="1"
                             Visibility="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type avalonDockControls:LayoutDocumentPaneControl}}, Path=Model.ShowHeader, Converter={avalonDockConverters:BoolToVisibilityConverter}}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
@@ -93,7 +85,7 @@
                             <Border
                                 x:Name="MainBorder"
                                 Grid.ColumnSpan="2"
-                                BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabStateLineActive}}"
+                                BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}"
                                 BorderThickness="0,0,0,2" />
                             <avalonDockControls:DocumentPaneTabPanel
                                 x:Name="HeaderPanel"
@@ -102,12 +94,12 @@
                                 Margin="0,0,0,2"
                                 IsItemsHost="true"
                                 KeyboardNavigation.TabIndex="1" />
-                            <ctrls:DropDownButton
+                            <avalonDockControls:DropDownButton
                                 x:Name="MenuDropDownButton"
                                 Grid.Column="1"
                                 Margin="0,0,0,5"
                                 Style="{StaticResource DocumentWellPaneDropDownButtonBaseStyle}">
-                                <ctrls:DropDownButton.DropDownContextMenu>
+                                <avalonDockControls:DropDownButton.DropDownContextMenu>
                                     <avalonDockControls:ContextMenuEx ItemsSource="{Binding Model.ChildrenSorted, RelativeSource={RelativeSource TemplatedParent}}">
                                         <avalonDockControls:ContextMenuEx.ItemContainerStyle>
                                             <Style BasedOn="{StaticResource {x:Type MenuItem}}" TargetType="{x:Type avalonDockControls:MenuItemEx}">
@@ -119,14 +111,16 @@
                                             </Style>
                                         </avalonDockControls:ContextMenuEx.ItemContainerStyle>
                                     </avalonDockControls:ContextMenuEx>
-                                </ctrls:DropDownButton.DropDownContextMenu>
+                                </avalonDockControls:DropDownButton.DropDownContextMenu>
                                 <Path
-                                    Width="8"
                                     Height="8"
-                                    Data="{DynamicResource PinDocMenu}"
-                                    Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
+                                    Margin="0,0,0,2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom"
+                                    Data="{DynamicResource Path_DocumentWellPaneControl_DropDownMenu}"
+                                    Fill="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonDefaultGlyph}}"
                                     Stretch="Uniform" />
-                            </ctrls:DropDownButton>
+                            </avalonDockControls:DropDownButton>
                         </Grid>
                         <Border
                             x:Name="ContentPanel"
@@ -154,9 +148,8 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding SelectedItem.IsActive, RelativeSource={RelativeSource Self}}" Value="False" />
-                                <Condition Binding="{Binding SelectedItem.IsFloating, RelativeSource={RelativeSource Self}}" Value="True" />
                             </MultiDataTrigger.Conditions>
-                            <Setter TargetName="MainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabStateLineInactive}}" />
+                            <Setter TargetName="MainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Model.ChildrenCount}" Value="0">
                             <Setter TargetName="MainBorder" Property="BorderBrush" Value="Transparent" />
@@ -177,25 +170,15 @@
                     <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedBackground}}" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedText}}" />
+                    <Setter Property="BorderBrush" Value="Transparent" />
                     <Setter Property="ToolTip" Value="{Binding ToolTip}" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type TabItem}">
-                                <Grid SnapsToDevicePixels="True" UseLayoutRounding="True">
-                                    <Border
-                                        x:Name="mainBorder"
-                                        Background="{TemplateBinding Background}"
-                                        BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemBorder}}"
-                                        BorderThickness="1">
-                                        <Border
-                                            x:Name="innerBorder"
-                                            Margin="-1,-1,-1,0"
-                                            BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemInBorder}}"
-                                            BorderThickness="0,2,0,0" />
-                                    </Border>
+                                <Grid SnapsToDevicePixels="true">
+                                    <Border x:Name="MainBorder" Background="{TemplateBinding Background}" />
                                     <ContentPresenter
                                         x:Name="Content"
-                                        Margin="0,0,0,-1"
                                         HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                         VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                         ContentSource="Header"
@@ -203,14 +186,9 @@
                                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                 </Grid>
                                 <ControlTemplate.Triggers>
-                                    <Trigger Property="IsEnabled" Value="false">
-                                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-                                    </Trigger>
                                     <!--  Document Well : Tab / Selected, active  -->
                                     <DataTrigger Binding="{Binding IsActive}" Value="True">
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemBorderActive}}" />
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemInBorderActive}}" />
+                                        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveText}}" />
                                     </DataTrigger>
                                     <!--  Document Well : Tab / Selected, inactive  -->
@@ -219,10 +197,16 @@
                                             <Condition Binding="{Binding IsActive}" Value="False" />
                                             <Condition Binding="{Binding IsSelected}" Value="True" />
                                         </MultiDataTrigger.Conditions>
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemBorderInactive}}" />
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemInBorderInactive}}" />
+                                        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveText}}" />
+                                    </MultiDataTrigger>
+                                    <!--  Document Well : Tab / Unselected  -->
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding IsActive}" Value="False" />
+                                            <Condition Binding="{Binding IsSelected}" Value="False" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter Property="BorderBrush" Value="Transparent" />
                                     </MultiDataTrigger>
                                     <!--  Document Well : Tab / Unselected, hovered  -->
                                     <MultiTrigger>
@@ -230,11 +214,12 @@
                                             <Condition Property="IsMouseOver" Value="true" />
                                             <Condition Property="Selector.IsSelected" Value="false" />
                                         </MultiTrigger.Conditions>
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemBorderUnselectedHover}}" />
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentTabItemInBorderUnselectedHover}}" />
+                                        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredBackground}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabUnselectedHoveredText}}" />
                                     </MultiTrigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                                    </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
@@ -249,7 +234,6 @@
                 </DataTemplate>
             </Setter.Value>
         </Setter>
-
         <Setter Property="ContentTemplate">
             <Setter.Value>
                 <DataTemplate>

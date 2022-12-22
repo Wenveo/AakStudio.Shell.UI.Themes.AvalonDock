@@ -4,7 +4,7 @@
     xmlns:avalonDock="clr-namespace:AvalonDock;assembly=AvalonDock"
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock">
 
-    <Style x:Key="ToolWellPaneItemBaseStyle" TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
+    <Style x:Key="{x:Type avalonDockControls:LayoutAnchorableTabItem}" TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
             <Setter.Value>

@@ -10,10 +10,7 @@
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ContextMenus.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DataTemplates.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DockTargetButton.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DocumentWellItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DocumentWellPaneControl.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DocumentWellPaneItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/DocumentWellWindow.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/GridResizerControl.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/NavigatorWindow.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/OverlayWindow.xaml" />
@@ -21,7 +18,6 @@
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellAnchorGroup.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellAnchorSide.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellItem.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellItemTitle.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellPaneControl.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellPaneItem.xaml" />
         <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/AvalonDock/ToolWellWindow.xaml" />
@@ -32,69 +28,19 @@
         BasedOn="{StaticResource {x:Type ContextMenu}}"
         TargetType="{x:Type avalonDockControls:ContextMenuEx}" />
 
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutAutoHideWindowControl}"
-        BasedOn="{StaticResource AutoHideChannelBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutAutoHideWindowControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutDocumentTabItem}"
-        BasedOn="{StaticResource DocumentWellItemBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutDocumentTabItem}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutDocumentControl}"
-        BasedOn="{StaticResource DocumentWellPaneItemBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutDocumentControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}"
-        BasedOn="{StaticResource DocumentWellWindowBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutGridResizerControl}"
-        BasedOn="{StaticResource GridResizerControlBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutGridResizerControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutAnchorableControl}"
-        BasedOn="{StaticResource ToolWellItemBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutAnchorableControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutAnchorableTabItem}"
-        BasedOn="{StaticResource ToolWellPaneItemBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}"
-        BasedOn="{StaticResource ToolWellWindowBaseStyle}"
-        TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:NavigatorWindow}"
-        BasedOn="{StaticResource NavigatorWindowBaseStyle}"
-        TargetType="{x:Type avalonDockControls:NavigatorWindow}" />
-
-    <Style
-        x:Key="{x:Type avalonDockControls:OverlayWindow}"
-        BasedOn="{StaticResource OverlayWindowBaseStyle}"
-        TargetType="{x:Type avalonDockControls:OverlayWindow}" />
-
     <Style x:Key="{x:Type avalonDock:DockingManager}" TargetType="{x:Type avalonDock:DockingManager}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.Background}}" />
         <Setter Property="AnchorableContextMenu" Value="{StaticResource ToolWellContextMenu}" />
         <Setter Property="AnchorableHeaderTemplate" Value="{StaticResource ToolWellHeaderTemplate}" />
-        <Setter Property="AnchorablePaneControlStyle" Value="{StaticResource ToolWellPaneControlBaseStyle}" />
+        <Setter Property="AnchorablePaneControlStyle" Value="{DynamicResource ToolWellPaneControlBaseStyle}" />
         <Setter Property="AnchorableTitleTemplate" Value="{StaticResource ToolWellTitleTemplate}" />
         <Setter Property="AnchorSideTemplate" Value="{StaticResource ToolWellAnchorSideTemplate}" />
         <Setter Property="AnchorGroupTemplate" Value="{StaticResource ToolWellAnchorGroupTemplate}" />
         <Setter Property="AnchorTemplate" Value="{StaticResource ToolWellAnchorTemplate}" />
         <Setter Property="DocumentContextMenu" Value="{StaticResource DocumentWellContextMenu}" />
         <Setter Property="DocumentHeaderTemplate" Value="{StaticResource DocumentWellHeaderTemplate}" />
-        <Setter Property="DocumentPaneControlStyle" Value="{StaticResource DocumentWellPaneControlBaseStyle}" />
+        <Setter Property="DocumentPaneControlStyle" Value="{DynamicResource DocumentWellPaneControlBaseStyle}" />
         <Setter Property="DocumentPaneMenuItemHeaderTemplate" Value="{StaticResource DocumentWellHeaderTemplate}" />
         <Setter Property="DocumentTitleTemplate" Value="{StaticResource DocumentWellTitleTemplate}" />
         <Setter Property="IconContentTemplate" Value="{StaticResource ToolWellIconContentTemplate}" />

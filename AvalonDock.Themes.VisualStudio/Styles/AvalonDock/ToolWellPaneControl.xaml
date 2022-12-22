@@ -24,8 +24,12 @@
                         <Border Grid.RowSpan="2" Background="Transparent" />
                         <Border
                             x:Name="ContentPanel"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.PanelBorderBrush}}"
+                            BorderThickness="0"
                             KeyboardNavigation.DirectionalNavigation="Contained"
                             KeyboardNavigation.TabIndex="2"
                             KeyboardNavigation.TabNavigation="Cycle">

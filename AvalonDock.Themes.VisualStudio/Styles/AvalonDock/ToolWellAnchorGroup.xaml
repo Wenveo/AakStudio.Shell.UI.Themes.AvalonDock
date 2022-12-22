@@ -2,12 +2,12 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
-    xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock">
+    xmlns:converters="clr-namespace:AvalonDock.Themes.VisualStudio.Converters">
 
     <ControlTemplate x:Key="ToolWellAnchorGroupTemplate" TargetType="{x:Type avalonDockControls:LayoutAnchorGroupControl}">
         <ItemsControl ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Children}">
             <ItemsControl.LayoutTransform>
-                <RotateTransform Angle="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Model.Parent.Side, Converter={avalonDockConverters:AnchorSideToAngleConverter}, TargetNullValue=0}" />
+                <RotateTransform Angle="{Binding RelativeSource={RelativeSource TemplatedParent}, Converter={converters:AnchorSideToAngleConverter2}, TargetNullValue=0}" />
             </ItemsControl.LayoutTransform>
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>

@@ -9,81 +9,83 @@
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes"
     xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=AvalonDock">
 
-    <PathGeometry x:Key="FloatingDocClose" Figures="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z" />
-    <PathGeometry x:Key="FloatingDocRestore" Figures="M3 5v9h9V5H3zm8 8H4V6h7v7z M5 5h1V4h7v7h-1v1h2V3H5v2z" />
-    <PathGeometry x:Key="FloatingDocMaximize" Figures="M3 3v10h10V3H3zm9 9H4V4h8v8z" />
+    <PathGeometry x:Key="Path_DocumentWellWindow_Close" Figures="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z" />
+    <PathGeometry x:Key="Path_DocumentWellWindow_Restore" Figures="M3 5v9h9V5H3zm8 8H4V6h7v7z M5 5h1V4h7v7h-1v1h2V3H5v2z" />
+    <PathGeometry x:Key="Path_DocumentWellWindow_Maximize" Figures="M3 3v10h10V3H3zm9 9H4V4h8v8z" />
+    <PathGeometry x:Key="Path_DocumentWellWindow_Minimize" Figures="M14 8v1H3V8h11z" />
 
-    <Style x:Key="DocumentFloatingWindowSystemButton" TargetType="{x:Type Button}">
-        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="Width" Value="45" />
-        <Setter Property="Height" Value="32" />
-        <Setter Property="Focusable" Value="False" />
-        <Setter Property="VerticalAlignment" Value="Top" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="Padding" Value="0" />
-        <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyph}}" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ButtonBase}">
-                    <Border
-                        x:Name="border"
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        SnapsToDevicePixels="true">
-                        <ContentPresenter
-                            x:Name="contentPresenter"
-                            Margin="{TemplateBinding Padding}"
-                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Focusable="False"
-                            RecognizesAccessKey="True"
-                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="controlz:NonClientControlProperties.IsNCMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
-                        </Trigger>
-                        <Trigger Property="controlz:NonClientControlProperties.IsNCPressed" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
-                            <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
-                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style x:Key="DocumentWellWindowBaseStyle" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+    <Style x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
+        <Setter Property="BorderThickness" Value="0" />
         <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorderInactive}}" />
         <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True" />
-        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="UseLayoutRounding" Value="True" />
-        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+                    <ControlTemplate.Resources>
+                        <Style x:Key="DocumentFloatingWindowSystemButton" TargetType="{x:Type Button}">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="BorderThickness" Value="1" />
+                            <Setter Property="BorderBrush" Value="Transparent" />
+                            <Setter Property="Width" Value="34" />
+                            <Setter Property="Height" Value="26" />
+                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="VerticalAlignment" Value="Top" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyph}}" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                                        <Border
+                                            x:Name="border"
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            SnapsToDevicePixels="true">
+                                            <ContentPresenter
+                                                x:Name="contentPresenter"
+                                                Margin="{TemplateBinding Padding}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                Focusable="False"
+                                                RecognizesAccessKey="True"
+                                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="controlz:NonClientControlProperties.IsNCMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
+                                            </Trigger>
+                                            <Trigger Property="controlz:NonClientControlProperties.IsNCPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
+                                                <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
+                                                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ControlTemplate.Resources>
                     <Border
                         x:Name="WindowBorder"
                         Background="{TemplateBinding Background}"
@@ -126,7 +128,7 @@
                                         <Path
                                             Width="9"
                                             Height="9"
-                                            Data="M14 8v1H3V8h11z"
+                                            Data="{DynamicResource Path_DocumentWellWindow_Minimize}"
                                             Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                             RenderOptions.EdgeMode="Aliased"
                                             Stretch="Uniform" />
@@ -144,7 +146,7 @@
                                         <Path
                                             Width="9"
                                             Height="9"
-                                            Data="{DynamicResource FloatingDocMaximize}"
+                                            Data="{DynamicResource Path_DocumentWellWindow_Maximize}"
                                             Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                             RenderOptions.EdgeMode="Aliased"
                                             Stretch="Uniform" />
@@ -162,7 +164,7 @@
                                         <Path
                                             Width="10"
                                             Height="10"
-                                            Data="{DynamicResource FloatingDocRestore}"
+                                            Data="{DynamicResource Path_DocumentWellWindow_Restore}"
                                             Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                             Stretch="Uniform" />
                                     </Button>
@@ -178,7 +180,7 @@
                                         <Path
                                             Width="10"
                                             Height="10"
-                                            Data="{DynamicResource FloatingDocClose}"
+                                            Data="{DynamicResource Path_DocumentWellWindow_Close}"
                                             Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                             Stretch="Uniform" />
                                     </Button>
@@ -187,7 +189,8 @@
                             <ContentPresenter
                                 Grid.Row="2"
                                 Margin="6"
-                                Content="{TemplateBinding Content}" />
+                                Content="{TemplateBinding Content}"
+                                Tag="{Binding RelativeSource={RelativeSource TemplatedParent}}" />
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -197,20 +200,6 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" Value="True" />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Model.SinglePane.SelectedContent.IsActive}" Value="True" />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=OwnedByDockingManagerWindow}" Value="True" />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Owner.IsActive}" Value="False" />
-                            </MultiDataTrigger.Conditions>
-                            <MultiDataTrigger.Setters>
-                                <Setter TargetName="HeaderContent" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}}" />
-                                <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorder}}" />
-                            </MultiDataTrigger.Setters>
-                        </MultiDataTrigger>
-                        <MultiDataTrigger>
-                            <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" Value="True" />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Model.SinglePane.SelectedContent.IsActive}" Value="True" />
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=OwnedByDockingManagerWindow}" Value="False" />
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.Setters>
                                 <Setter TargetName="HeaderContent" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}}" />
@@ -222,5 +211,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 </ResourceDictionary>

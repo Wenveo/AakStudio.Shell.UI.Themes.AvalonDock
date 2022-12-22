@@ -4,7 +4,7 @@
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:AvalonDock.Themes.VisualStudio.Themes">
 
-    <Style x:Key="GridResizerControlBaseStyle" TargetType="{x:Type avalonDockControls:LayoutGridResizerControl}">
+    <Style x:Key="{x:Type avalonDockControls:LayoutGridResizerControl}" TargetType="{x:Type avalonDockControls:LayoutGridResizerControl}">
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.Background}}" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
