@@ -5,10 +5,10 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <LangVersion>9.0</LangVersion>
-    <Version>4.70.3</Version>
-    <AssemblyVersion>4.70.3</AssemblyVersion>
-    <FileVersion>4.70.3</FileVersion>
-    <PackageVersion>4.70.3-beta1028</PackageVersion>
+    <Version>4.70.4</Version>
+    <AssemblyVersion>4.70.4</AssemblyVersion>
+    <FileVersion>4.70.4</FileVersion>
+    <PackageVersion>4.70.4-beta1222</PackageVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</Company>
