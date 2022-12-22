@@ -45,7 +45,7 @@ namespace AvalonDock.Themes.VisualStudio.Controls.Attach
                 if ((bool)e.NewValue)
                 {
                     var typeName = window.GetType().FullName;
-                    if (typeName.StartsWith("AvalonDock.Controls"))
+                    if (typeName != null && typeName.StartsWith("AvalonDock.Controls"))
                     {
                         // Clear AvalonDock WindowChrome
                         Microsoft.Windows.Shell.WindowChrome.SetWindowChrome(window, null);
