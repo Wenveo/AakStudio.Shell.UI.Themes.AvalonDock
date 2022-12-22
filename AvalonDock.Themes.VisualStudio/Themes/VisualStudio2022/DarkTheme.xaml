@@ -1,48 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/AvalonDock/VisualStudio2022/DarkBrushs.xaml" />
-        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/AvalonDock/VisualStudio2022/Styles.Templates.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Themes/Brushes/VisualStudio2022/DarkBrushs.xaml" />
+        <ResourceDictionary Source="/AvalonDock.Themes.VisualStudio;component/Styles/VisualStudio2022.Templates.Styles.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
-    <SolidColorBrush x:Key="ContextMenuBackground" Color="#FF2E2E2E" />
-    <SolidColorBrush x:Key="ContextMenuBorderBrush" Color="#FF424242" />
-    <SolidColorBrush x:Key="ContextMenuRectangleFill" Color="#FF2E2E2E" />
-
-    <SolidColorBrush x:Key="TabItemStaticBackground" Color="#001F1F1F" />
-    <SolidColorBrush x:Key="TabItemStaticBorder" Color="#001F1F1F" />
-    <SolidColorBrush x:Key="TabItemStaticInBorder" Color="#001F1F1F" />
-    <SolidColorBrush x:Key="TabItemStaticForeground" Color="#FFFAFAFA" />
-    <SolidColorBrush x:Key="TabItemMouseOverBackground" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="TabItemMouseOverBorder" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="TabItemMouseOverInBorder" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="TabItemMouseOverForeground" Color="#FFFAFAFA" />
-    <SolidColorBrush x:Key="TabItemDisabledBackground" Color="#FF333333" />
-    <SolidColorBrush x:Key="TabItemDisabledBorder" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="TabItemDisabledInBorder" Color="#001F1F1F" />
-    <SolidColorBrush x:Key="TabItemDisabledForeground" Color="#FF5C5C5C" />
-    <SolidColorBrush x:Key="TabItemSelectedBackground" Color="#FF1F1F1F" />
-    <SolidColorBrush x:Key="TabItemSelectedBorder" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="TabItemSelectedInBorder" Color="#FF1F1F1F" />
-    <SolidColorBrush x:Key="TabItemSelectedForeground" Color="#FFFAFAFA" />
-
-    <SolidColorBrush x:Key="MenuItemBackground" Color="#002E2E2E" />
-    <SolidColorBrush x:Key="MenuItemBackgroundHover" Color="#FF3D3D3D" />
-    <SolidColorBrush x:Key="MenuItemBackgroundDisabled" Color="#002E2E2E" />
-    <SolidColorBrush x:Key="MenuItemBorder" Color="#00424242" />
-    <SolidColorBrush x:Key="MenuItemBorderHover" Color="#FF707070" />
-    <SolidColorBrush x:Key="MenuItemBorderDisabled" Color="#00424242" />
-    <SolidColorBrush x:Key="MenuItemForeground" Color="#FFD6D6D6" />
-    <SolidColorBrush x:Key="MenuItemForegroundHover" Color="#FFFAFAFA" />
-    <SolidColorBrush x:Key="MenuItemForegroundDisabled" Color="#FF5C5C5C" />
-    <SolidColorBrush x:Key="MenuItemGlyph" Color="#FFD6D6D6" />
-    <SolidColorBrush x:Key="MenuItemGlyphHover" Color="#FFD6D6D6" />
-    <SolidColorBrush x:Key="MenuItemGlyphDisabled" Color="#FF5B5B5B" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanel" Color="#FF2E2E2E" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanelHover" Color="#FF333333" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanelDisabled" Color="#002E2E2E" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanelBorder" Color="#00424242" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanelBorderHover" Color="#00424242" />
-    <SolidColorBrush x:Key="MenuItemGlyphPanelBorderDisabled" Color="#00424242" />
-
-    <SolidColorBrush x:Key="SystemColorsMenuText" Color="#FFFAFAFA" />
 </ResourceDictionary>

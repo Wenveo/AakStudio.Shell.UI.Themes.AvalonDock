@@ -1,5 +1,6 @@
 ﻿using AvalonDock.Controls;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -154,7 +155,7 @@ namespace AvalonDock.Themes.VisualStudio.Controls
             {
                 foreach (var item in DockTargets)
                 {
-                    var pos = item.PointFromScreen(Helpers.Interop.InteropMethods.GetMousePosition());
+                    var pos = item.PointFromScreen(MouseHelper.GetMousePosition());
                     var size = item.RenderSize;
                     // 2022.10.27 - Fix the size to show
                     size.Width += 2;
