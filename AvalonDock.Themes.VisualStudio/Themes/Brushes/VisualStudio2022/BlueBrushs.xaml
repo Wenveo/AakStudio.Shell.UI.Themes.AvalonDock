@@ -527,4 +527,164 @@
         x:Key="{x:Static reskeys:ResourceKeys.DocumentTabMenuItemGlyph}"
         options:Freeze="true"
         Color="#212121" />
+
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.ContextMenuBackground}"
+        options:Freeze="true"
+        Color="#FFEAF0FF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.ContextMenuBorderBrush}"
+        options:Freeze="true"
+        Color="#FF9BA7B7" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.ContextMenuRectangleFill}"
+        options:Freeze="true"
+        Color="#FFF2F4FE" />
+
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemForeground}"
+        options:Freeze="true"
+        Color="#FFD9EEFA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemStaticBackground}"
+        options:Freeze="true"
+        Color="#FF40568D" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemStaticBorder}"
+        options:Freeze="true"
+        Color="#00CCD5F0" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemStaticInBorder}"
+        options:Freeze="true"
+        Color="#00CCD5F0" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemStaticForeground}"
+        options:Freeze="true"
+        Color="#FFFAFAFA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemMouseOverBackground}"
+        options:Freeze="true"
+        Color="#FFBBC6F1" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemMouseOverBorder}"
+        options:Freeze="true"
+        Color="#00FFFFFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemMouseOverInBorder}"
+        options:Freeze="true"
+        Color="#00FFFFFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemMouseOverForeground}"
+        options:Freeze="true"
+        Color="#FF1E1E1E" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemDisabledBackground}"
+        options:Freeze="true"
+        Color="#FFF0F0F0" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemDisabledBorder}"
+        options:Freeze="true"
+        Color="#FFD9D9D9" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemDisabledInBorder}"
+        options:Freeze="true"
+        Color="#00FFFFFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemDisabledForeground}"
+        options:Freeze="true"
+        Color="#FF656565" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemSelectedBackground}"
+        options:Freeze="true"
+        Color="#FFF7F9FE" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemSelectedBorder}"
+        options:Freeze="true"
+        Color="#FF5D6B99" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemSelectedInBorder}"
+        options:Freeze="true"
+        Color="#FFF7F9FE" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.TabItemSelectedForeground}"
+        options:Freeze="true"
+        Color="#FF1E1E1E" />
+
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBackground}"
+        options:Freeze="true"
+        Color="#00E9EEFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBackgroundHover}"
+        options:Freeze="true"
+        Color="#FFB1C5FF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBackgroundDisabled}"
+        options:Freeze="true"
+        Color="#00E9EEFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBorder}"
+        options:Freeze="true"
+        Color="#0094A6CA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBorderHover}"
+        options:Freeze="true"
+        Color="#FF203D77" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemBorderDisabled}"
+        options:Freeze="true"
+        Color="#0094A6CA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemForeground}"
+        options:Freeze="true"
+        Color="#FF1E1E1E" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemForegroundHover}"
+        options:Freeze="true"
+        Color="#FF1E1E1E" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemForegroundDisabled}"
+        options:Freeze="true"
+        Color="#FF757575" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyph}"
+        options:Freeze="true"
+        Color="#FF9B9FAF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphHover}"
+        options:Freeze="true"
+        Color="#FF1E1E1E" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphDisabled}"
+        options:Freeze="true"
+        Color="#FFBBBFCC" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanel}"
+        options:Freeze="true"
+        Color="#FFD9E0F8" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanelHover}"
+        options:Freeze="true"
+        Color="#00E9EEFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanelDisabled}"
+        options:Freeze="true"
+        Color="#00E9EEFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanelBorder}"
+        options:Freeze="true"
+        Color="#0094A6CA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanelBorderHover}"
+        options:Freeze="true"
+        Color="#0094A6CA" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.MenuItemGlyphPanelBorderDisabled}"
+        options:Freeze="true"
+        Color="#0094A6CA" />
+
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.SystemColorsMenuText}"
+        options:Freeze="true"
+        Color="#FF000000" />
 </ResourceDictionary>

@@ -29,7 +29,7 @@
                 <Setter TargetName="MainBorder" Property="BorderThickness" Value="0,6,0,0" />
                 <Setter TargetName="MainBorder" Property="Padding" Value="0,3,0,7" />
             </Trigger>
-            <Trigger Property="IsMouseOver" Value="True">
+            <Trigger Property="IsMouseOver" Value="true">
                 <Setter TargetName="MainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.AutoHideTabHoveredBackground}}" />
                 <Setter TargetName="MainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.AutoHideTabHoveredBorder}}" />
                 <Setter TargetName="MainBorder" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.AutoHideTabHoveredText}}" />

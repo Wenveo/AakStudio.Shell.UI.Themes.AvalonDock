@@ -20,7 +20,7 @@
                             <Setter Property="Background" Value="Transparent" />
                             <Setter Property="BorderThickness" Value="1" />
                             <Setter Property="BorderBrush" Value="Transparent" />
-                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Focusable" Value="false" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="Padding" Value="0" />
@@ -43,17 +43,17 @@
                                                 Margin="{TemplateBinding Padding}"
                                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                Focusable="False"
-                                                RecognizesAccessKey="True"
+                                                Focusable="false"
+                                                RecognizesAccessKey="true"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                         </Border>
                                         <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
+                                            <Trigger Property="IsMouseOver" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBackground}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredBorder}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonHoveredGlyph}}" />
                                             </Trigger>
-                                            <Trigger Property="IsChecked" Value="True">
+                                            <Trigger Property="IsChecked" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBackground}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedBorder}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellOverflowButtonPressedGlyph}}" />
@@ -136,7 +136,7 @@
                         </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding SelectedItem.IsActive, RelativeSource={RelativeSource Self}}" Value="False" />
+                                <Condition Binding="{Binding SelectedItem.IsActive, RelativeSource={RelativeSource Self}}" Value="false" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="MainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
                         </MultiDataTrigger>
@@ -145,7 +145,7 @@
                             <Setter TargetName="ContentPanel" Property="Visibility" Value="Collapsed" />
                             <Setter TargetName="MenuDropDownButton" Property="Visibility" Value="Collapsed" />
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Model.ShowHeader}" Value="False">
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Model.ShowHeader}" Value="false">
                             <Setter TargetName="ContentPanel" Property="BorderThickness" Value="1" />
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -171,20 +171,20 @@
                                         HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                         VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"
                                         ContentSource="Header"
-                                        RecognizesAccessKey="True"
+                                        RecognizesAccessKey="true"
                                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                 </Grid>
                                 <ControlTemplate.Triggers>
                                     <!--  Document Well : Tab / Selected, active  -->
-                                    <DataTrigger Binding="{Binding IsActive}" Value="True">
+                                    <DataTrigger Binding="{Binding IsActive}" Value="true">
                                         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveBackground}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedActiveText}}" />
                                     </DataTrigger>
                                     <!--  Document Well : Tab / Selected, inactive  -->
                                     <MultiDataTrigger>
                                         <MultiDataTrigger.Conditions>
-                                            <Condition Binding="{Binding IsActive}" Value="False" />
-                                            <Condition Binding="{Binding IsSelected}" Value="True" />
+                                            <Condition Binding="{Binding IsActive}" Value="false" />
+                                            <Condition Binding="{Binding IsSelected}" Value="true" />
                                         </MultiDataTrigger.Conditions>
                                         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveBackground}}" />
                                         <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabSelectedInactiveText}}" />
@@ -192,8 +192,8 @@
                                     <!--  Document Well : Tab / Unselected  -->
                                     <MultiDataTrigger>
                                         <MultiDataTrigger.Conditions>
-                                            <Condition Binding="{Binding IsActive}" Value="False" />
-                                            <Condition Binding="{Binding IsSelected}" Value="False" />
+                                            <Condition Binding="{Binding IsActive}" Value="false" />
+                                            <Condition Binding="{Binding IsSelected}" Value="false" />
                                         </MultiDataTrigger.Conditions>
                                         <Setter Property="BorderBrush" Value="Transparent" />
                                     </MultiDataTrigger>

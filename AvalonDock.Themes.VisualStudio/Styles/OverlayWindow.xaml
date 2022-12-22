@@ -9,7 +9,7 @@
     <PathGeometry x:Key="Path_DockPaneEmpty" Figures="M 266.388,0.000223796L 277.612,0.000223796L 277.612,7.60856L 280.392,10.3883L 288,10.3883L 288,21.6122L 280.392,21.6122L 277.612,24.3919L 277.612,32.0002L 266.388,32.0002L 266.388,24.3919L 263.608,21.6122L 256,21.6122L 256,10.3883L 263.608,10.3883L 266.388,7.60856L 266.388,0.000223796 Z " />
 
     <Style x:Key="{x:Type avalonDockControls:OverlayWindow}" TargetType="{x:Type avalonDockControls:OverlayWindow}">
-        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="true" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Template">
@@ -28,7 +28,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="True"
+                                IsOutSide="true"
                                 TargetDock="DockLeft" />
 
                             <ctrls:DockTargetButton
@@ -37,7 +37,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="True"
+                                IsOutSide="true"
                                 TargetDock="DockRight" />
 
                             <ctrls:DockTargetButton
@@ -46,7 +46,7 @@
                                 VerticalAlignment="Bottom"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="True"
+                                IsOutSide="true"
                                 TargetDock="DockBottom" />
 
                             <ctrls:DockTargetButton
@@ -55,7 +55,7 @@
                                 VerticalAlignment="Top"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="True"
+                                IsOutSide="true"
                                 TargetDock="DockBottom" />
                         </Grid>
 
@@ -304,10 +304,10 @@
                         <Path
                             x:Name="PART_PreviewBox"
                             Fill="{DynamicResource {x:Static reskeys:ResourceKeys.PreviewBoxBackgroundBrushKey}}"
-                            SnapsToDevicePixels="True"
+                            SnapsToDevicePixels="true"
                             Stroke="{DynamicResource {x:Static reskeys:ResourceKeys.PreviewBoxBorderBrushKey}}"
                             StrokeThickness="5"
-                            UseLayoutRounding="True"
+                            UseLayoutRounding="true"
                             Visibility="Hidden" />
                     </Canvas>
                 </ControlTemplate>

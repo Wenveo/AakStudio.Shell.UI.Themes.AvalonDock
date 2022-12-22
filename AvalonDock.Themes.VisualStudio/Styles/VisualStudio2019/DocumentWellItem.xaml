@@ -19,7 +19,7 @@
                             <Setter Property="Background" Value="Transparent" />
                             <Setter Property="BorderThickness" Value="1" />
                             <Setter Property="BorderBrush" Value="Transparent" />
-                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Focusable" Value="false" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="Padding" Value="0" />
@@ -42,18 +42,18 @@
                                                 Margin="{TemplateBinding Padding}"
                                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                Focusable="False"
-                                                RecognizesAccessKey="True"
+                                                Focusable="false"
+                                                RecognizesAccessKey="true"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                         </Border>
                                         <ControlTemplate.Triggers>
-                                            <DataTrigger Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True">
+                                            <DataTrigger Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true">
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveGlyph}}" />
                                             </DataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveHoveredBackground}}" />
@@ -63,8 +63,8 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactivePressedBackground}}" />
@@ -72,13 +72,13 @@
                                                     <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactivePressedGlyph}}" />
                                                 </MultiDataTrigger.Setters>
                                             </MultiDataTrigger>
-                                            <DataTrigger Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True">
+                                            <DataTrigger Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true">
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveGlyph}}" />
                                             </DataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActiveHoveredBackground}}" />
@@ -88,8 +88,8 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedActivePressedBackground}}" />
@@ -99,9 +99,9 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredGlyph}}" />
@@ -109,10 +109,10 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonHoveredBackground}}" />
@@ -122,10 +122,10 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsLastFocusedDocument, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonUnselectedTabHoveredButtonPressedBackground}}" />
@@ -135,8 +135,8 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveGlyph}}" />
@@ -144,9 +144,9 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactiveHoveredBackground}}" />
@@ -156,9 +156,9 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Path=Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=Model.IsSelected, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:LayoutDocumentTabItem}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentWellTabButtonSelectedInactivePressedBackground}}" />
@@ -221,7 +221,7 @@
                         <DataTrigger Binding="{Binding Path=IsSelected}" Value="true">
                             <Setter TargetName="DocumentCloseButton" Property="Visibility" Value="Visible" />
                         </DataTrigger>
-                        <Trigger Property="IsMouseOver" Value="True">
+                        <Trigger Property="IsMouseOver" Value="true">
                             <Setter TargetName="DocumentCloseButton" Property="Visibility" Value="Visible" />
                         </Trigger>
                         <DataTrigger Binding="{Binding Path=IsLastFocusedDocument}" Value="true">
@@ -257,7 +257,7 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsLastFocusedDocument}" Value="true" />
-                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="0" />
@@ -265,7 +265,7 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsLastFocusedDocument}" Value="true" />
-                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="0" />
@@ -277,7 +277,7 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsActive}" Value="true" />
-                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="1,1,0,1" />
@@ -285,33 +285,33 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding IsActive}" Value="true" />
-                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="1,1,0,1" />
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding Path=IsActive}" Value="False" />
-                                <Condition Binding="{Binding Path=IsSelected}" Value="True" />
+                                <Condition Binding="{Binding Path=IsActive}" Value="false" />
+                                <Condition Binding="{Binding Path=IsSelected}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="1,1,0,1" />
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding Path=IsActive}" Value="False" />
-                                <Condition Binding="{Binding Path=IsSelected}" Value="True" />
-                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding Path=IsActive}" Value="false" />
+                                <Condition Binding="{Binding Path=IsSelected}" Value="true" />
+                                <Condition Binding="{Binding IsMouseOver, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="1,1,0,1" />
                         </MultiDataTrigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding Path=IsActive}" Value="False" />
-                                <Condition Binding="{Binding Path=IsSelected}" Value="True" />
-                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="True" />
+                                <Condition Binding="{Binding Path=IsActive}" Value="false" />
+                                <Condition Binding="{Binding Path=IsSelected}" Value="true" />
+                                <Condition Binding="{Binding IsPressed, ElementName=DocumentCloseButton}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="Header" Property="BorderThickness" Value="0" />
                             <Setter TargetName="Header" Property="Padding" Value="1,1,0,1" />

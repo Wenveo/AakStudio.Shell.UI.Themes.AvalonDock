@@ -65,7 +65,7 @@
                             <Setter Property="Background" Value="Transparent" />
                             <Setter Property="BorderThickness" Value="1" />
                             <Setter Property="BorderBrush" Value="Transparent" />
-                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Focusable" Value="false" />
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="Padding" Value="0" />
@@ -86,28 +86,28 @@
                                                 Margin="{TemplateBinding Padding}"
                                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                Focusable="False"
-                                                RecognizesAccessKey="True"
+                                                Focusable="false"
+                                                RecognizesAccessKey="true"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                         </Border>
                                         <ControlTemplate.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
+                                            <Trigger Property="IsMouseOver" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBackground}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBorder}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredGlyph}}" />
                                             </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
+                                            <Trigger Property="IsPressed" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBackground}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBorder}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedGlyph}}" />
                                             </Trigger>
-                                            <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="True">
+                                            <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="true">
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActiveGlyph}}" />
                                             </DataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActiveHoveredBackground}}" />
@@ -117,8 +117,8 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="True" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="true" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBackground}}" />
@@ -128,8 +128,8 @@
                                             </MultiDataTrigger>
                                             <MultiDataTrigger>
                                                 <MultiDataTrigger.Conditions>
-                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="False" />
-                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="True" />
+                                                    <Condition Binding="{Binding Model.IsActive, RelativeSource={RelativeSource AncestorType={x:Type avalonDockControls:AnchorablePaneTitle}}}" Value="false" />
+                                                    <Condition Binding="{Binding Path=IsPressed, RelativeSource={RelativeSource Self}}" Value="true" />
                                                 </MultiDataTrigger.Conditions>
                                                 <MultiDataTrigger.Setters>
                                                     <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveHoveredBackground}}" />
@@ -148,7 +148,7 @@
                             BasedOn="{StaticResource ToolWellItemTitleButtonBaseStyle}"
                             TargetType="{x:Type avalonDockControls:DropDownButton}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding Path=IsChecked, RelativeSource={RelativeSource Self}}" Value="True">
+                                <DataTrigger Binding="{Binding Path=IsChecked, RelativeSource={RelativeSource Self}}" Value="true">
                                     <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBackground}}" />
                                     <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedBorder}}" />
                                     <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonActivePressedGlyph}}" />
@@ -186,7 +186,7 @@
                                         Margin="4,0,2,0"
                                         VerticalAlignment="Center"
                                         RenderOptions.BitmapScalingMode="NearestNeighbor"
-                                        UseLayoutRounding="True" />
+                                        UseLayoutRounding="true" />
                                 </DockPanel>
                                 <avalonDockControls:DropDownButton
                                     x:Name="MenuDropDownButton"
@@ -236,23 +236,23 @@
                         </Border>
                     </avalonDockControls:DropDownControlArea>
                     <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding Model.IsAutoHidden, RelativeSource={RelativeSource Mode=Self}}" Value="True">
+                        <DataTrigger Binding="{Binding Model.IsAutoHidden, RelativeSource={RelativeSource Mode=Self}}" Value="true">
                             <Setter TargetName="PART_AutoHidePin" Property="LayoutTransform">
                                 <Setter.Value>
                                     <RotateTransform Angle="90" />
                                 </Setter.Value>
                             </Setter>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Model.CanClose, RelativeSource={RelativeSource Mode=Self}}" Value="True">
+                        <DataTrigger Binding="{Binding Model.CanClose, RelativeSource={RelativeSource Mode=Self}}" Value="true">
                             <Setter TargetName="PART_HidePin" Property="Command" Value="{Binding Path=LayoutItem.CloseCommand, RelativeSource={RelativeSource TemplatedParent}}" />
                             <Setter TargetName="PART_HidePin" Property="ToolTip" Value="{x:Static avalonDockProperties:Resources.Document_Close}" />
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource Mode=Self}}" Value="True">
+                        <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource Mode=Self}}" Value="true">
                             <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveBackground}}" />
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveText}}" />
                             <Setter TargetName="DragHandleTexture" Property="Fill" Value="{StaticResource ActivedDragHandleDrawingBrush}" />
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource Mode=Self}}" Value="False">
+                        <DataTrigger Binding="{Binding Model.IsActive, RelativeSource={RelativeSource Mode=Self}}" Value="false">
                             <Setter TargetName="DragHandleTexture" Property="Fill" Value="{StaticResource UnActivedDragHandleDrawingBrush}" />
                         </DataTrigger>
                     </ControlTemplate.Triggers>

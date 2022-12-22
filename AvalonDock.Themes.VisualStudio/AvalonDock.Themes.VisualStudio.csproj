@@ -9,7 +9,7 @@
     <AssemblyVersion>4.70.4</AssemblyVersion>
     <FileVersion>4.70.4</FileVersion>
     <PackageVersion>4.70.4-beta1222</PackageVersion>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</Company>
     <Description>Visual Studio (2019+) Themes for AvalonDock.</Description>
@@ -18,17 +18,17 @@
     <RepositoryUrl>https://github.com/Noisrev/AvalonDock.Themes.VisualStudio</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
+      <Pack>true</Pack>
       <PackagePath>\</PackagePath>
     </None>
     <None Include="..\README.md">
-      <Pack>True</Pack>
+      <Pack>true</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>

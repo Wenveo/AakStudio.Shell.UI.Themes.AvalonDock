@@ -17,11 +17,11 @@
     <Style x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
         <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorderInactive}}" />
-        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True" />
+        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="true" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="UseLayoutRounding" Value="True" />
-        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="true" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="WindowStyle" Value="None" />
         <Setter Property="Template">
             <Setter.Value>
@@ -34,7 +34,7 @@
                             <Setter Property="BorderBrush" Value="Transparent" />
                             <Setter Property="Width" Value="45" />
                             <Setter Property="Height" Value="32" />
-                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Focusable" Value="false" />
                             <Setter Property="VerticalAlignment" Value="Top" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="HorizontalAlignment" Value="Center" />
@@ -55,27 +55,27 @@
                                                 Margin="{TemplateBinding Padding}"
                                                 HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                                Focusable="False"
-                                                RecognizesAccessKey="True"
+                                                Focusable="false"
+                                                RecognizesAccessKey="true"
                                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                                         </Border>
                                         <ControlTemplate.Triggers>
-                                            <Trigger Property="controlz:NonClientControlProperties.IsNCMouseOver" Value="True">
+                                            <Trigger Property="controlz:NonClientControlProperties.IsNCMouseOver" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
                                             </Trigger>
-                                            <Trigger Property="IsMouseOver" Value="True">
+                                            <Trigger Property="IsMouseOver" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundHover}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderHover}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphHover}}" />
                                             </Trigger>
-                                            <Trigger Property="controlz:NonClientControlProperties.IsNCPressed" Value="True">
+                                            <Trigger Property="controlz:NonClientControlProperties.IsNCPressed" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
                                             </Trigger>
-                                            <Trigger Property="IsPressed" Value="True">
+                                            <Trigger Property="IsPressed" Value="true">
                                                 <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackgroundPressed}}" />
                                                 <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBorderPressed}}" />
                                                 <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonGlyphPressed}}" />
@@ -101,7 +101,7 @@
                                 controlz:NonClientControlProperties.HitTestResult="CAPTION"
                                 Background="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarBackground}}"
                                 TextElement.Foreground="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}}">
-                                <Grid UseLayoutRounding="True">
+                                <Grid UseLayoutRounding="true">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="Auto" />
@@ -198,7 +198,7 @@
                         </Trigger>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" Value="True" />
+                                <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" Value="true" />
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.Setters>
                                 <Setter TargetName="HeaderContent" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}}" />

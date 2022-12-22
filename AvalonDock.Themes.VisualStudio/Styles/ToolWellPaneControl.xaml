@@ -60,9 +60,9 @@
             <Setter.Value>
                 <Style TargetType="{x:Type TabItem}">
                     <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-                    <Setter Property="Background" Value="{DynamicResource TabItemStaticBackground}" />
-                    <Setter Property="BorderBrush" Value="{DynamicResource TabItemStaticBorder}" />
-                    <Setter Property="Foreground" Value="{DynamicResource TabItemStaticForeground}" />
+                    <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemStaticBackground}}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemStaticBorder}}" />
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemStaticForeground}}" />
                     <Setter Property="Margin" Value="0" />
                     <Setter Property="Padding" Value="6,3" />
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
@@ -78,7 +78,7 @@
                                         Margin="0"
                                         Background="{TemplateBinding Background}"
                                         BorderBrush="{TemplateBinding BorderBrush}">
-                                        <Border x:Name="innerBorder" BorderBrush="{DynamicResource TabItemStaticInBorder}" />
+                                        <Border x:Name="innerBorder" BorderBrush="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemStaticInBorder}}" />
                                     </Border>
                                     <ContentPresenter
                                         x:Name="contentPresenter"
@@ -86,30 +86,30 @@
                                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                         ContentSource="Header"
-                                        Focusable="False"
-                                        RecognizesAccessKey="True"
+                                        Focusable="false"
+                                        RecognizesAccessKey="true"
                                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                        TextElement.Foreground="{DynamicResource TabItemForeground}" />
+                                        TextElement.Foreground="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemForeground}}" />
                                 </Grid>
                                 <ControlTemplate.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource TabItemMouseOverForeground}" />
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemMouseOverForeground}}" />
                                     </Trigger>
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource TabItemDisabledForeground}" />
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemDisabledForeground}}" />
                                     </Trigger>
-                                    <Trigger Property="IsSelected" Value="True">
-                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource TabItemSelectedForeground}" />
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemSelectedForeground}}" />
                                     </Trigger>
                                     <MultiDataTrigger>
                                         <MultiDataTrigger.Conditions>
                                             <Condition Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
                                         </MultiDataTrigger.Conditions>
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource TabItemMouseOverInBorder}" />
+                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemMouseOverInBorder}}" />
                                         <Setter TargetName="innerBorder" Property="BorderThickness" Value="0,0,0,1" />
                                         <Setter TargetName="mainBorder" Property="Margin" Value="0,0,0,0" />
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource TabItemMouseOverBackground}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource TabItemMouseOverBorder}" />
+                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemMouseOverBackground}}" />
+                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemMouseOverBorder}}" />
                                         <Setter TargetName="mainBorder" Property="BorderThickness" Value="1,0,1,1" />
                                     </MultiDataTrigger>
                                     <MultiDataTrigger>
@@ -117,11 +117,11 @@
                                             <Condition Binding="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
                                         </MultiDataTrigger.Conditions>
                                         <Setter TargetName="contentPresenter" Property="Opacity" Value="0.56" />
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource TabItemDisabledInBorder}" />
+                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemDisabledInBorder}}" />
                                         <Setter TargetName="innerBorder" Property="BorderThickness" Value="0,0,0,1" />
                                         <Setter TargetName="mainBorder" Property="Margin" Value="0,0,0,0" />
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource TabItemDisabledBackground}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource TabItemDisabledBorder}" />
+                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemDisabledBackground}}" />
+                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemDisabledBorder}}" />
                                         <Setter TargetName="mainBorder" Property="BorderThickness" Value="1,0,1,1" />
                                     </MultiDataTrigger>
                                     <MultiDataTrigger>
@@ -136,11 +136,11 @@
                                         <MultiDataTrigger.Conditions>
                                             <Condition Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource Self}}" Value="true" />
                                         </MultiDataTrigger.Conditions>
-                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource TabItemSelectedInBorder}" />
+                                        <Setter TargetName="innerBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemSelectedInBorder}}" />
                                         <Setter TargetName="innerBorder" Property="BorderThickness" Value="0,0,0,2" />
                                         <Setter TargetName="mainBorder" Property="Margin" Value="0,-1,0,0" />
-                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource TabItemSelectedBackground}" />
-                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource TabItemSelectedBorder}" />
+                                        <Setter TargetName="mainBorder" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemSelectedBackground}}" />
+                                        <Setter TargetName="mainBorder" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabItemSelectedBorder}}" />
                                         <Setter TargetName="mainBorder" Property="BorderThickness" Value="1,0,1,1" />
                                     </MultiDataTrigger>
                                 </ControlTemplate.Triggers>

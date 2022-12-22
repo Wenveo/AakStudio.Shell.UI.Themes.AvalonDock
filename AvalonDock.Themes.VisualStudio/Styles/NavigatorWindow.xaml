@@ -65,20 +65,20 @@
     <Style x:Key="{x:Type avalonDockControls:NavigatorWindow}" TargetType="{x:Type avalonDockControls:NavigatorWindow}">
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.NavigatorWindowBackground}}" />
         <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="UseLayoutRounding" Value="True" />
-        <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="true" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="true" />
         <Setter Property="attach:WindowChromeAttach.CornerPreference" Value="Round" />
-        <Setter Property="attach:WindowChromeAttach.EnableMaxRestore" Value="False" />
-        <Setter Property="attach:WindowChromeAttach.EnableMinimize" Value="False" />
-        <Setter Property="attach:WindowChromeAttach.IgnoreTaskbarOnMaximize" Value="False" />
+        <Setter Property="attach:WindowChromeAttach.EnableMaxRestore" Value="false" />
+        <Setter Property="attach:WindowChromeAttach.EnableMinimize" Value="false" />
+        <Setter Property="attach:WindowChromeAttach.IgnoreTaskbarOnMaximize" Value="false" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:NavigatorWindow}">
                     <Border
                         x:Name="WindowBorder"
                         Background="{TemplateBinding Background}"
-                        SnapsToDevicePixels="True">
+                        SnapsToDevicePixels="true">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="54" />

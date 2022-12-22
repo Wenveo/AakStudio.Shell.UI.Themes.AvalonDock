@@ -236,6 +236,61 @@ namespace AvalonDock.Themes.VisualStudio.Themes
 
         #endregion Visual Studio 2022 Style
 
+        #region ContextMenu
+
+        public static readonly ComponentResourceKey ContextMenuBackground = new ComponentResourceKey(typeof(ResourceKeys), "ContextMenuBackground");
+        public static readonly ComponentResourceKey ContextMenuBorderBrush = new ComponentResourceKey(typeof(ResourceKeys), "ContextMenuBorderBrush");
+        public static readonly ComponentResourceKey ContextMenuRectangleFill = new ComponentResourceKey(typeof(ResourceKeys), "ContextMenuRectangleFill");
+
+        #endregion ContextMenu
+
+        #region TabItem
+
+        public static readonly ComponentResourceKey TabItemForeground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemForeground");
+        public static readonly ComponentResourceKey TabItemStaticBackground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemStaticBackground");
+        public static readonly ComponentResourceKey TabItemStaticBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemStaticBorder");
+        public static readonly ComponentResourceKey TabItemStaticInBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemStaticInBorder");
+        public static readonly ComponentResourceKey TabItemStaticForeground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemStaticForeground");
+        public static readonly ComponentResourceKey TabItemMouseOverBackground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemMouseOverBackground");
+        public static readonly ComponentResourceKey TabItemMouseOverBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemMouseOverBorder");
+        public static readonly ComponentResourceKey TabItemMouseOverInBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemMouseOverInBorder");
+        public static readonly ComponentResourceKey TabItemMouseOverForeground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemMouseOverForeground");
+        public static readonly ComponentResourceKey TabItemDisabledBackground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemDisabledBackground");
+        public static readonly ComponentResourceKey TabItemDisabledBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemDisabledBorder");
+        public static readonly ComponentResourceKey TabItemDisabledInBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemDisabledInBorder");
+        public static readonly ComponentResourceKey TabItemDisabledForeground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemDisabledForeground");
+        public static readonly ComponentResourceKey TabItemSelectedBackground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemSelectedBackground");
+        public static readonly ComponentResourceKey TabItemSelectedBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemSelectedBorder");
+        public static readonly ComponentResourceKey TabItemSelectedInBorder = new ComponentResourceKey(typeof(ResourceKeys), "TabItemSelectedInBorder");
+        public static readonly ComponentResourceKey TabItemSelectedForeground = new ComponentResourceKey(typeof(ResourceKeys), "TabItemSelectedForeground");
+
+        #endregion TabItem
+
+        #region MenuItem
+
+        public static readonly ComponentResourceKey MenuItemBackground = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBackground");
+        public static readonly ComponentResourceKey MenuItemBackgroundHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBackgroundHover");
+        public static readonly ComponentResourceKey MenuItemBackgroundDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBackgroundDisabled");
+        public static readonly ComponentResourceKey MenuItemBorder = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBorder");
+        public static readonly ComponentResourceKey MenuItemBorderHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBorderHover");
+        public static readonly ComponentResourceKey MenuItemBorderDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemBorderDisabled");
+        public static readonly ComponentResourceKey MenuItemForeground = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemForeground");
+        public static readonly ComponentResourceKey MenuItemForegroundHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemForegroundHover");
+        public static readonly ComponentResourceKey MenuItemForegroundDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemForegroundDisabled");
+        public static readonly ComponentResourceKey MenuItemGlyph = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyph");
+        public static readonly ComponentResourceKey MenuItemGlyphHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphHover");
+        public static readonly ComponentResourceKey MenuItemGlyphDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphDisabled");
+        public static readonly ComponentResourceKey MenuItemGlyphPanel = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanel");
+        public static readonly ComponentResourceKey MenuItemGlyphPanelHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanelHover");
+        public static readonly ComponentResourceKey MenuItemGlyphPanelDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanelDisabled");
+        public static readonly ComponentResourceKey MenuItemGlyphPanelBorder = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanelBorder");
+        public static readonly ComponentResourceKey MenuItemGlyphPanelBorderHover = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanelBorderHover");
+        public static readonly ComponentResourceKey MenuItemGlyphPanelBorderDisabled = new ComponentResourceKey(typeof(ResourceKeys), "MenuItemGlyphPanelBorderDisabled");
+
+        #endregion MenuItem
+
+        public static readonly ComponentResourceKey SystemColorsMenuText = new ComponentResourceKey(typeof(ResourceKeys), "SystemColorsMenuText");
+
         #endregion Brush Keys
     }
 }

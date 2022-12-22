@@ -8,20 +8,20 @@
     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
 
     <Style x:Key="{x:Type avalonDockControls:ContextMenuEx}" TargetType="{x:Type ContextMenu}">
-        <Setter Property="Background" Value="{DynamicResource ContextMenuBackground}" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ContextMenuBackground}}" />
         <Setter Property="FontFamily" Value="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}" />
         <Setter Property="FontSize" Value="{DynamicResource {x:Static SystemFonts.MenuFontSizeKey}}" />
         <Setter Property="FontStyle" Value="{DynamicResource {x:Static SystemFonts.MenuFontStyleKey}}" />
         <Setter Property="FontWeight" Value="{DynamicResource {x:Static SystemFonts.MenuFontWeightKey}}" />
-        <Setter Property="Foreground" Value="{DynamicResource SystemColorsMenuText}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.SystemColorsMenuText}}" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="BorderBrush" Value="{DynamicResource ContextMenuBorderBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ContextMenuBorderBrush}}" />
         <Setter Property="Padding" Value="2" />
         <Setter Property="Grid.IsSharedSizeScope" Value="true" />
         <Setter Property="HasDropShadow" Value="{DynamicResource {x:Static SystemParameters.DropShadowKey}}" />
         <Setter Property="ScrollViewer.PanningMode" Value="Both" />
-        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ContextMenu}">
@@ -56,7 +56,7 @@
                                         Width="27"
                                         Margin="0"
                                         HorizontalAlignment="Left"
-                                        Fill="{DynamicResource ContextMenuRectangleFill}"
+                                        Fill="{DynamicResource {x:Static reskeys:ResourceKeys.ContextMenuRectangleFill}}"
                                         RadiusX="0"
                                         RadiusY="0" />
                                     <ItemsPresenter
@@ -86,12 +86,12 @@
     <Style x:Key="{x:Type avalonDockControls:MenuItemEx}" TargetType="{x:Type MenuItem}">
         <Setter Property="HorizontalContentAlignment" Value="{Binding Path=HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
         <Setter Property="VerticalContentAlignment" Value="{Binding Path=VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
-        <Setter Property="Background" Value="{DynamicResource MenuItemBackground}" />
-        <Setter Property="BorderBrush" Value="{DynamicResource MenuItemBorder}" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBackground}}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBorder}}" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Foreground" Value="{DynamicResource MenuItemForeground}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemForeground}}" />
         <Setter Property="ScrollViewer.PanningMode" Value="Both" />
-        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
         <Setter Property="Padding" Value="2,4,2,4" />
         <Setter Property="Template">
             <Setter.Value>
@@ -135,14 +135,14 @@
                                     Height="16"
                                     Margin="1,1,0,0"
                                     Data="F1 M 5,11 L 3,7 L 5,7 L 6,9 L 9,3 L 11,3 L 7,11 L 5,11 Z"
-                                    Fill="{DynamicResource MenuItemGlyph}"
+                                    Fill="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyph}}"
                                     FlowDirection="LeftToRight" />
                             </Border>
                             <ContentPresenter
                                 Grid.Column="2"
                                 Margin="{TemplateBinding MenuItem.Padding}"
                                 ContentSource="Header"
-                                RecognizesAccessKey="True"
+                                RecognizesAccessKey="true"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             <TextBlock
                                 Grid.Column="4"
@@ -159,20 +159,20 @@
                             <Setter TargetName="Icon" Property="Visibility" Value="Collapsed" />
                         </Trigger>
                         <Trigger Property="IsHighlighted" Value="true">
-                            <Setter Property="Background" Value="{DynamicResource MenuItemBackgroundHover}" />
-                            <Setter Property="BorderBrush" Value="{DynamicResource MenuItemBorderHover}" />
-                            <Setter Property="Foreground" Value="{DynamicResource MenuItemForegroundHover}" />
-                            <Setter TargetName="Glyph" Property="Fill" Value="{DynamicResource MenuItemGlyphHover}" />
-                            <Setter TargetName="GlyphPanel" Property="Background" Value="{DynamicResource MenuItemGlyphPanelHover}" />
-                            <Setter TargetName="GlyphPanel" Property="BorderBrush" Value="{DynamicResource MenuItemGlyphPanelBorderHover}" />
+                            <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBackgroundHover}}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBorderHover}}" />
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemForegroundHover}}" />
+                            <Setter TargetName="Glyph" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphHover}}" />
+                            <Setter TargetName="GlyphPanel" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphPanelHover}}" />
+                            <Setter TargetName="GlyphPanel" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphPanelBorderHover}}" />
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Background" Value="{DynamicResource MenuItemBackgroundDisabled}" />
-                            <Setter Property="BorderBrush" Value="{DynamicResource MenuItemBorderDisabled}" />
-                            <Setter Property="Foreground" Value="{DynamicResource MenuItemForegroundDisabled}" />
-                            <Setter TargetName="Glyph" Property="Fill" Value="{DynamicResource MenuItemGlyphDisabled}" />
-                            <Setter TargetName="GlyphPanel" Property="Background" Value="{DynamicResource MenuItemGlyphPanelDisabled}" />
-                            <Setter TargetName="GlyphPanel" Property="BorderBrush" Value="{DynamicResource MenuItemGlyphPanelBorderDisabled}" />
+                            <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBackgroundDisabled}}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemBorderDisabled}}" />
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemForegroundDisabled}}" />
+                            <Setter TargetName="Glyph" Property="Fill" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphDisabled}}" />
+                            <Setter TargetName="GlyphPanel" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphPanelDisabled}}" />
+                            <Setter TargetName="GlyphPanel" Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.MenuItemGlyphPanelBorderDisabled}}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

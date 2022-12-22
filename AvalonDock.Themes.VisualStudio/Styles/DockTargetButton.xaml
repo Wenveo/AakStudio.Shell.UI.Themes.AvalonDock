@@ -7,21 +7,21 @@
     <Style TargetType="ctrls:DockTargetButton">
         <Style.Resources>
             <Style TargetType="Canvas">
-                <Setter Property="SnapsToDevicePixels" Value="True" />
-                <Setter Property="UseLayoutRounding" Value="True" />
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="UseLayoutRounding" Value="true" />
             </Style>
             <Style TargetType="Path">
                 <Setter Property="StrokeStartLineCap" Value="Square" />
                 <Setter Property="StrokeEndLineCap" Value="Square" />
-                <Setter Property="SnapsToDevicePixels" Value="True" />
-                <Setter Property="UseLayoutRounding" Value="True" />
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="UseLayoutRounding" Value="true" />
                 <Setter Property="StrokeThickness" Value="1" />
             </Style>
             <Style TargetType="Line">
                 <Setter Property="StrokeStartLineCap" Value="Square" />
                 <Setter Property="StrokeEndLineCap" Value="Square" />
-                <Setter Property="SnapsToDevicePixels" Value="True" />
-                <Setter Property="UseLayoutRounding" Value="True" />
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="UseLayoutRounding" Value="true" />
                 <Setter Property="StrokeThickness" Value="1" />
             </Style>
         </Style.Resources>
@@ -33,8 +33,8 @@
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Opacity" Value="0.6" />
         <Setter Property="CornerRadius" Value="2" />
-        <Setter Property="SnapsToDevicePixels" Value="True" />
-        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="UseLayoutRounding" Value="true" />
 
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonBackgroundBrushKey}}" />
         <Setter Property="BorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonBorderBrushKey}}" />
@@ -45,7 +45,7 @@
         <Setter Property="OutSideBorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonOutSideBorderBrushKey}}" />
 
         <Style.Triggers>
-            <Trigger Property="IsTargeted" Value="True">
+            <Trigger Property="IsTargeted" Value="true">
                 <Setter Property="Opacity" Value="1" />
             </Trigger>
 
@@ -339,7 +339,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockLeft" />
-                    <Condition Property="IsOutSide" Value="True" />
+                    <Condition Property="IsOutSide" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -383,7 +383,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockTop" />
-                    <Condition Property="IsOutSide" Value="True" />
+                    <Condition Property="IsOutSide" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -427,7 +427,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockRight" />
-                    <Condition Property="IsOutSide" Value="True" />
+                    <Condition Property="IsOutSide" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -471,7 +471,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockBottom" />
-                    <Condition Property="IsOutSide" Value="True" />
+                    <Condition Property="IsOutSide" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
