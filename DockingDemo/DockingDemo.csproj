@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AvalonDock.Themes.VisualStudio\AvalonDock.Themes.VisualStudio.csproj" />
+    <ProjectReference Include="..\VisualStudio.Shell.UI.Themes.AvalonDock\VisualStudio.Shell.UI.Themes.AvalonDock.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,13 +1,12 @@
 ﻿using AvalonDock.Themes;
-using AvalonDock.Themes.VisualStudio;
-using AvalonDock.Themes.VisualStudio.Controls.Attach;
-using AvalonDock.Themes.VisualStudio.Themes;
-using Microsoft.Windows.Shell;
 using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using VisualStudio.Shell.UI.Themes.AvalonDock;
+using VisualStudio.Shell.UI.Themes.AvalonDock.Controls.Attach;
+using VisualStudio.Shell.UI.Themes.AvalonDock.Themes;
 
 namespace DockingDemo;
 /// <summary>

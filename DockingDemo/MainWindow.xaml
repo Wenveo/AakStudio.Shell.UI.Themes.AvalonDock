@@ -7,13 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DockingDemo"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vsdockthemes="http://visualstudio.shell.ui.themes.avalondock"
     Title="MainWindow"
     Width="1280"
     Height="720"
+    vsdockthemes:GlowWindowAttach.GlowMode="ControlzEx"
+    vsdockthemes:WindowChromeAttach.IsEnabled="True"
     BorderThickness="0"
-    GlowWindowAttach.GlowMode="ControlzEx"
     UseLayoutRounding="True"
-    WindowChromeAttach.IsEnabled="True"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -87,7 +88,7 @@
                     Tag="5" />
             </MenuItem>
         </Menu>
-        <DockingManager x:Name="dockingManager" Grid.Row="1" >
+        <DockingManager x:Name="dockingManager" Grid.Row="1">
             <LayoutRoot>
                 <LayoutPanel Orientation="Horizontal">
                     <LayoutDocumentPaneGroup>
