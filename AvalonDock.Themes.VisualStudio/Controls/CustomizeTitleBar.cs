@@ -107,11 +107,6 @@ namespace AvalonDock.Themes.VisualStudio.Controls
                 {
                     if (ContextMenu is not null)
                     {
-                        var pos = MouseHelper.GetMousePosition();
-
-                        ContextMenu.Placement = PlacementMode.Absolute;
-                        ContextMenu.HorizontalOffset = DpiHelper.RoundLayoutValueX(pos.X);
-                        ContextMenu.VerticalOffset = DpiHelper.RoundLayoutValueY(pos.Y);
                         ContextMenu.DataContext = ContextMenuDataContext;
                         ContextMenu.IsOpen = true;
                     }
