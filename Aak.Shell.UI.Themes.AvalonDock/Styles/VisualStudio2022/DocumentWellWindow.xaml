@@ -14,7 +14,7 @@
     <PathGeometry x:Key="Path_DocumentWellWindow_Maximize" Figures="M3 3v10h10V3H3zm9 9H4V4h8v8z" />
     <PathGeometry x:Key="Path_DocumentWellWindow_Minimize" Figures="M14 8v1H3V8h11z" />
 
-    <Style x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+    <Style x:Key="DocumentWellWindowBaseStyle" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
         <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
         <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorderInactive}}" />
         <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="true" />
@@ -210,5 +210,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}"
+        BasedOn="{StaticResource DocumentWellWindowBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}" />
 
 </ResourceDictionary>

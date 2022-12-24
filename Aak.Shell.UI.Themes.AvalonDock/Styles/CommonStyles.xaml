@@ -2,6 +2,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonDock="clr-namespace:AvalonDock;assembly=AvalonDock"
+    xmlns:avalonDockControls="https://github.com/Dirkster99/AvalonDock"
     xmlns:reskeys="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Themes">
 
     <ResourceDictionary.MergedDictionaries>
@@ -22,7 +23,47 @@
         <ResourceDictionary Source="/Aak.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellWindow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="{x:Type avalonDock:DockingManager}" TargetType="{x:Type avalonDock:DockingManager}">
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutAutoHideWindowControl}"
+        BasedOn="{StaticResource AutoHideChannelBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutAutoHideWindowControl}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutDocumentControl}"
+        BasedOn="{StaticResource DocumentWellPaneItemBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutDocumentControl}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutGridResizerControl}"
+        BasedOn="{StaticResource GridResizerControlBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutGridResizerControl}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:NavigatorWindow}"
+        BasedOn="{StaticResource NavigatorWindowBaseStyle}"
+        TargetType="{x:Type avalonDockControls:NavigatorWindow}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:OverlayWindow}"
+        BasedOn="{StaticResource OverlayWindowBaseStyle}"
+        TargetType="{x:Type avalonDockControls:OverlayWindow}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutAnchorableControl}"
+        BasedOn="{StaticResource ToolWellItemBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutAnchorableControl}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutAnchorableTabItem}"
+        BasedOn="{StaticResource ToolWellPaneItemBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}" />
+
+    <Style
+        x:Key="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}"
+        BasedOn="{StaticResource ToolWellWindowBaseStyle}"
+        TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}" />
+
+    <Style x:Key="DockingManagerBaseStyle" TargetType="{x:Type avalonDock:DockingManager}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.Background}}" />
         <Setter Property="AnchorableContextMenu" Value="{StaticResource ToolWellContextMenu}" />
@@ -91,5 +132,10 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style
+        x:Key="{x:Type avalonDock:DockingManager}"
+        BasedOn="{StaticResource DockingManagerBaseStyle}"
+        TargetType="{x:Type avalonDock:DockingManager}" />
 
 </ResourceDictionary>

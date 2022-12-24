@@ -4,8 +4,7 @@
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Themes">
 
-
-    <Style x:Key="{x:Type avalonDockControls:LayoutAutoHideWindowControl}" TargetType="{x:Type avalonDockControls:LayoutAutoHideWindowControl}">
+    <Style x:Key="AutoHideChannelBaseStyle" TargetType="{x:Type avalonDockControls:LayoutAutoHideWindowControl}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.TabBackground}}" />
         <Setter Property="AnchorableStyle">

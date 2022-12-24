@@ -2,7 +2,22 @@
     x:Class="DockingDemo.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:avalonDockControls="https://github.com/Dirkster99/AvalonDock"
     xmlns:local="clr-namespace:DockingDemo"
     StartupUri="MainWindow.xaml">
-    <Application.Resources />
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Aak.Shell.UI.Themes.AvalonDock;component/Themes/VisualStudio2022/DarkTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}"
+                BasedOn="{StaticResource DocumentWellWindowBaseStyle}"
+                TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+                <Setter Property="AllowMinimize" Value="True" />
+                <Setter Property="ShowInTaskbar" Value="True" />
+                <Setter Property="OwnedByDockingManagerWindow" Value="False" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
