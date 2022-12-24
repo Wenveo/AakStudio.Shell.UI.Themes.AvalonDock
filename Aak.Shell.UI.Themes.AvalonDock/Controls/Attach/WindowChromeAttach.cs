@@ -2,7 +2,6 @@
 using Microsoft.Xaml.Behaviors;
 using System.Linq;
 using System.Windows;
-using System.Windows.Shapes;
 
 namespace Aak.Shell.UI.Themes.AvalonDock.Controls.Attach
 {
