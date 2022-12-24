@@ -8,7 +8,7 @@
     <Version>4.70.3</Version>
     <AssemblyVersion>4.70.3</AssemblyVersion>
     <FileVersion>4.70.3</FileVersion>
-    <PackageVersion>4.70.3-beta1224</PackageVersion>
+    <PackageVersion>4.70.3-beta1225</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</Company>
