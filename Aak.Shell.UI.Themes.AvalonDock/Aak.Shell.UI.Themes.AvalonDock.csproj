@@ -12,7 +12,15 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</Company>
-    <Description>Visual Studio (2019+) Themes for AvalonDock.</Description>
+    <Description>
+		Aak.Shell.UI Themes for AvalonDock.
+		VisualStudio 2019 (Blue)
+		VisualStudio 2019 (Dark)
+		VisualStudio 2019 (Light)
+		VisualStudio 2022 (Blue)
+		VisualStudio 2022 (Dark)
+		VisualStudio 2022 (Light)
+	</Description>
     <Copyright>Copyright © 2022</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</RepositoryUrl>
