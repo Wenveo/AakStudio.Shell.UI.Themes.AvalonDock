@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using VisualStudio.Shell.UI.Themes.AvalonDock;
-using VisualStudio.Shell.UI.Themes.AvalonDock.Controls.Attach;
-using VisualStudio.Shell.UI.Themes.AvalonDock.Themes;
+using Aak.Shell.UI.Themes.AvalonDock;
+using Aak.Shell.UI.Themes.AvalonDock.Controls.Attach;
+using Aak.Shell.UI.Themes.AvalonDock.Themes;
 
 namespace DockingDemo;
 /// <summary>

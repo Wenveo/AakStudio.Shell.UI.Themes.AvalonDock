@@ -1,6 +1,6 @@
-# VisualStudio.Shell.UI.Themes.AvalonDock
+# Aak.Shell.UI.Themes.AvalonDock
 
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/VisualStudio.Shell.UI.Themes.AvalonDock)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Aak.Shell.UI.Themes.AvalonDock)
 
 Visual Studio (2019+) Themes for AvalonDock.
 
