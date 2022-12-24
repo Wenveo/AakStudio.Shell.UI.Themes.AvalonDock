@@ -11,13 +11,13 @@
 - VisualStudio 2022 (Light)
 
 # Screenshots
-![1](Screenshots/1.png)
+![Screenshot1](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/1.png)
 
-![2](Screenshots/2.png)
+![Screenshot2](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/2.png)
 
-![3](Screenshots/3.png)
+![Screenshot3](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/3.png)
 
-![4](Screenshots/4.png)
+![Screenshot4](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/4.png)
 
 
 Email: Noisrev@outlook.com
