@@ -10,4 +10,5 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Controls")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Controls.Attach")]
+[assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Converters")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Themes")]
