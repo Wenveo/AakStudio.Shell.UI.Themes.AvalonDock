@@ -1,12 +1,15 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows;
-using Windows.Win32;
-using Windows.Win32.Foundation;
 
 namespace Aak.Shell.UI.Themes.AvalonDock.Controls
 {
     internal static class MouseHelper
     {
+        [DllImport("USER32.dll", ExactSpelling = true, SetLastError = true)]
+        [DefaultDllImportSearchPaths(DllImportSearchPath.System32)]
+        internal static extern unsafe IntPtr GetCursorPos(global::System.Drawing.Point* lpPoint);
+
         [StructLayout(LayoutKind.Sequential)]
         private struct PointWrap
         {
@@ -14,13 +17,13 @@ namespace Aak.Shell.UI.Themes.AvalonDock.Controls
             public int Y;
         }
 
-        private static BOOL GetPointWrap(out PointWrap point)
+        private static bool GetPointWrap(out PointWrap point)
         {
             unsafe
             {
                 fixed (PointWrap* ptr = &point)
                 {
-                    return PInvoke.GetCursorPos((System.Drawing.Point*)ptr);
+                    return GetCursorPos((System.Drawing.Point*)ptr) != IntPtr.Zero;
                 }
             }
         }

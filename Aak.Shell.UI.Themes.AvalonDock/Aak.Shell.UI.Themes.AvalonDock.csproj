@@ -44,10 +44,6 @@
   <ItemGroup>
     <PackageReference Include="ControlzEx" Version="6.0.0-alpha0255" />
     <PackageReference Include="Dirkster.AvalonDock" Version="4.71.1" />
-    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.2.164-beta">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
     
   <ItemGroup Condition=" '$(TargetFramework.StartsWith(net4))' == 'true' ">
