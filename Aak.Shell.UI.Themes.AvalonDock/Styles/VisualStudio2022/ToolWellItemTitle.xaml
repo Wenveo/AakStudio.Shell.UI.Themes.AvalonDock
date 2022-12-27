@@ -6,7 +6,7 @@
     xmlns:avalonDockProperties="clr-namespace:AvalonDock.Properties;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Themes">
 
-    <Geometry x:Key="Path_ToolWellIcon_Menu">M 0 0 L 3 3 L 6 0 Z</Geometry>
+    <Geometry x:Key="Path_ToolWellIcon_Menu">M 352.041,32.0005L 320,0.000162761L 384,0.000162761L 352.041,32.0005 Z</Geometry>
     <Geometry x:Key="Path_ToolWellIcon_AutoHide">F1 M3,11 L3,7 L0,7 L0,6 L1,6 L1,1 L1,0 L6,0 L6,1 L6,6 L7,6 L7,7 L4,7 L4,11 L3,11 M2,1 L2,6 L4,6 L4,1 L2,1</Geometry>
     <Geometry x:Key="Path_ToolWellIcon_Close">F1 M0,0 L2,0 L5,3 L8,0 L10,0 L6,4 L10,8 L8,8 L5,5 L2,8 L0,8 L4,4 L0,0</Geometry>
 
@@ -69,8 +69,10 @@
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="Padding" Value="0" />
-                            <Setter Property="Height" Value="15" />
-                            <Setter Property="Width" Value="15" />
+                            <Setter Property="Height" Value="16" />
+                            <Setter Property="Width" Value="16" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                            <Setter Property="VerticalAlignment" Value="Bottom" />
                             <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveGlyph}}" />
                             <Setter Property="Template">
                                 <Setter.Value>
@@ -199,12 +201,14 @@
                                 <avalonDockControls:DropDownButton
                                     x:Name="MenuDropDownButton"
                                     Grid.Column="1"
+                                    Margin="0,0,1,0"
                                     DropDownContextMenu="{Binding Model.Root.Manager.AnchorableContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
                                     DropDownContextMenuDataContext="{Binding Path=LayoutItem, RelativeSource={RelativeSource TemplatedParent}}"
                                     Style="{StaticResource ToolWellItemTitleDropDownButtonBaseStyle}"
                                     ToolTip="{x:Static avalonDockProperties:Resources.Anchorable_CxMenu_Hint}">
                                     <Path
-                                        Margin="3"
+                                        Width="8"
+                                        Height="8"
                                         Data="{DynamicResource Path_ToolWellIcon_Menu}"
                                         Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                         Stretch="Uniform" />
@@ -213,6 +217,7 @@
                                 <Button
                                     x:Name="PART_AutoHidePin"
                                     Grid.Column="2"
+                                    Margin="0,0,1,0"
                                     Command="{Binding Path=LayoutItem.AutoHideCommand, RelativeSource={RelativeSource TemplatedParent}}"
                                     Style="{StaticResource ToolWellItemTitleButtonBaseStyle}"
                                     ToolTip="{x:Static avalonDockProperties:Resources.Anchorable_BtnAutoHide_Hint}"
@@ -233,7 +238,7 @@
                                     Visibility="{Binding Path=IsEnabled, RelativeSource={RelativeSource Self}, Mode=OneWay, Converter={avalonDockConverters:BoolToVisibilityConverter}}">
                                     <Path
                                         Width="10"
-                                        Height="8"
+                                        Height="10"
                                         Data="{DynamicResource Path_ToolWellIcon_Close}"
                                         Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                         Stretch="Uniform" />

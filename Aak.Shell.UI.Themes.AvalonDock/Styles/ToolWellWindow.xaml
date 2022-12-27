@@ -82,8 +82,8 @@
                             <Setter Property="HorizontalContentAlignment" Value="Center" />
                             <Setter Property="VerticalContentAlignment" Value="Center" />
                             <Setter Property="Padding" Value="0" />
-                            <Setter Property="Height" Value="15" />
-                            <Setter Property="Width" Value="15" />
+                            <Setter Property="Height" Value="16" />
+                            <Setter Property="Width" Value="16" />
                             <Setter Property="HorizontalAlignment" Value="Center" />
                             <Setter Property="VerticalAlignment" Value="Center" />
                             <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionButtonInactiveGlyph}}" />
@@ -259,9 +259,8 @@
                                                 ToolTip="{x:Static avalonDockProperties:Resources.Anchorable_CxMenu_Hint}"
                                                 Visibility="{Binding Path=Model.IsSinglePane, RelativeSource={RelativeSource TemplatedParent}, Converter={avalonDockConverters:BoolToVisibilityConverter}}">
                                                 <Path
-                                                    Width="9"
+                                                    Width="8"
                                                     Height="8"
-                                                    Margin="0,0,0,1"
                                                     Data="{DynamicResource Path_ToolWellWindow_Menu}"
                                                     Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                                     Stretch="Uniform" />
@@ -281,6 +280,7 @@
                                                 <Path
                                                     Width="9"
                                                     Height="9"
+                                                    Margin="1,1,0,0"
                                                     Data="{DynamicResource Path_ToolWellWindow_Maximize}"
                                                     Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                                     Stretch="Uniform" />
@@ -300,7 +300,6 @@
                                                 <Path
                                                     Width="10"
                                                     Height="10"
-                                                    Margin="1,1,0,0"
                                                     Data="{DynamicResource Path_ToolWellWindow_Restore}"
                                                     Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                                     Stretch="Uniform" />

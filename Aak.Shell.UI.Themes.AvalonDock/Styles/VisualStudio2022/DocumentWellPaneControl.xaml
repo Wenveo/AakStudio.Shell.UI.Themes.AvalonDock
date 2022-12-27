@@ -5,7 +5,7 @@
     xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock"
     xmlns:reskeys="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Themes">
 
-    <PathGeometry x:Key="Path_DocumentWellPaneControl_DropDownMenu" Figures="M 352.041,32.0005L 320,0.000162761L 384,0.000162761L 352.041,32.0005 Z " />
+    <PathGeometry x:Key="Path_DocumentWellPaneControl_DropDownMenu" Figures="M 352.041,32.0005L 320,0.000162761L 384,0.000162761L 352.041,32.0005 Z" />
 
     <Style x:Key="DocumentWellPaneControlBaseStyle" TargetType="{x:Type avalonDockControls:LayoutDocumentPaneControl}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -105,6 +105,7 @@
                                 <Path
                                     Width="8"
                                     Height="8"
+                                    Margin="0,4,0,0"
                                     Data="{DynamicResource Path_DocumentWellPaneControl_DropDownMenu}"
                                     Fill="{Binding Path=(TextElement.Foreground), RelativeSource={RelativeSource AncestorType={x:Type ButtonBase}}}"
                                     Stretch="Uniform" />
