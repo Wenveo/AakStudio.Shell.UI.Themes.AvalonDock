@@ -424,7 +424,7 @@
     <SolidColorBrush
         x:Key="{x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}"
         options:Freeze="true"
-        Color="#999999" />
+        Color="#F1F1F1" />
     <SolidColorBrush
         x:Key="{x:Static reskeys:ResourceKeys.DocumentFloatingWindowSystemButtonBackground}"
         options:Freeze="true"
