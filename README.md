@@ -2,7 +2,6 @@
 
 ![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Aak.Shell.UI.Themes.AvalonDock)
 
-# Aak.Shell.UI Themes for AvalonDock.
 - VisualStudio 2019 (Blue)
 - VisualStudio 2019 (Dark)
 - VisualStudio 2019 (Light)
