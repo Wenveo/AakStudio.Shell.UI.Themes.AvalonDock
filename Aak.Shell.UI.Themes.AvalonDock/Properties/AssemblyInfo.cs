@@ -8,6 +8,6 @@ using System.Windows.Markup;
 
 [assembly: XmlnsPrefix("http://aak.shell.ui.themes.avalondock", "avalonDockThemes")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock")]
+[assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Attachs")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Controls")]
-[assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Controls.Attach")]
 [assembly: XmlnsDefinition("http://aak.shell.ui.themes.avalondock", "Aak.Shell.UI.Themes.AvalonDock.Themes")]

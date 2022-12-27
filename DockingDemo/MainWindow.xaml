@@ -10,8 +10,8 @@
     Title="MainWindow"
     Width="1280"
     Height="720"
-    avalondockThemes:GlowWindowAttach.GlowMode="ControlzEx"
-    avalondockThemes:WindowChromeAttach.IsEnabled="True"
+    avalondockThemes:GlowWindowAttach.GlowBrush="{DynamicResource {x:Static avalondockThemes:ResourceKeys.FloatingDocumentWindowBorder}}"
+    avalondockThemes:GlowWindowAttach.NonActiveGlowBrush="{DynamicResource {x:Static avalondockThemes:ResourceKeys.FloatingDocumentWindowBorderInactive}}"
     BorderThickness="0"
     UseLayoutRounding="True"
     mc:Ignorable="d">

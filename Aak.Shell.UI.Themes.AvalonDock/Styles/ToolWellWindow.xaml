@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:attach="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Controls.Attach"
+    xmlns:attachs="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Attachs"
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock"
     xmlns:avalonDockProperties="clr-namespace:AvalonDock.Properties;assembly=AvalonDock"
@@ -16,14 +16,17 @@
     <PathGeometry x:Key="Path_ToolWellWindow_Close" Figures="M 0,2.0345e-005L 7.62109,2.0345e-005L 19.2627,12.0551L 30.9043,2.0345e-005L 38.5241,2.0345e-005L 23.0726,16.0003L 38.5234,32L 30.9023,32L 19.2621,19.9462L 7.62177,32L 0.00195313,32L 15.4521,16.001L 0,2.0345e-005 Z" />
 
     <Style x:Key="ToolWellWindowBaseStyle" TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}">
-        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="true" />
-        <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
-        <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorderInactive}}" />
-        <Setter Property="UseLayoutRounding" Value="true" />
+        <Setter Property="attachs:WindowChromeAttach.EnableMinimize" Value="{Binding RelativeSource={RelativeSource Self}, Path=AllowMinimize}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorder}}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.NonActiveGlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorderInactive}}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.IsActive" Value="{Binding RelativeSource={RelativeSource Self}, Path=Model.SinglePane.SelectedContent.IsActive}" />
+        <Setter Property="shell:WindowChrome.WindowChrome" Value="{x:Null}" />
+        <Setter Property="WindowChrome.WindowChrome" Value="{x:Null}" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="WindowStyle" Value="None" />
-        <Setter Property="ResizeMode" Value="CanResize" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}">
@@ -344,7 +347,6 @@
                                 <Setter TargetName="Header" Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveBackground}}" />
                                 <Setter TargetName="Header" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.ToolWindowCaptionActiveText}}" />
                                 <Setter TargetName="DragHandleTexture" Property="Fill" Value="{StaticResource ActivedDragHandleDrawingBrush}" />
-                                <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorder}}" />
                             </MultiDataTrigger.Setters>
                         </MultiDataTrigger>
                         <DataTrigger Binding="{Binding Model.SinglePane.SelectedContent.CanClose, RelativeSource={RelativeSource Mode=Self}}" Value="true">

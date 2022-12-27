@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:attach="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Controls.Attach"
+    xmlns:attachs="clr-namespace:Aak.Shell.UI.Themes.AvalonDock.Attachs"
     xmlns:avalonDockControls="clr-namespace:AvalonDock.Controls;assembly=AvalonDock"
     xmlns:avalonDockConverters="clr-namespace:AvalonDock.Converters;assembly=AvalonDock"
     xmlns:avalonDockProperties="clr-namespace:AvalonDock.Properties;assembly=AvalonDock"
@@ -15,14 +15,25 @@
     <PathGeometry x:Key="Path_DocumentWellWindow_Minimize" Figures="M14 8v1H3V8h11z" />
 
     <Style x:Key="DocumentWellWindowBaseStyle" TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
-        <Setter Property="UseLayoutRounding" Value="true" />
-        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="attachs:WindowChromeAttach.EnableMinimize" Value="{Binding RelativeSource={RelativeSource Self}, Path=AllowMinimize}" />
+        <!--
+            Use the customize active glow window, Because this will show the active color when displayed.
+            Bacause GlowWindowAttach can't do that (The activated color is shown for the first time).
+            
+            Displaying a floating window when dragged from a pane.
+            (The floating window display without notifying the activation event?)
+            But it will work in MainWindow (GlowWindowAttach) (no drag)
+        -->
+        <Setter Property="attachs:CustomizeGlowWindowAttach.IsActive" Value="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorder}}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.NonActiveGlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorderInactive}}" />
+        <Setter Property="shell:WindowChrome.WindowChrome" Value="{x:Null}" />
+        <Setter Property="WindowChrome.WindowChrome" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="attach:GlowWindowAttach.GlowMode" Value="ControlzEx" />
-        <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorderInactive}}" />
-        <Setter Property="attach:WindowChromeAttach.IsEnabled" Value="true" />
         <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
@@ -203,7 +214,6 @@
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.Setters>
                                 <Setter TargetName="HeaderContent" Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DocumentFloatingWindowTitleBarTextActive}}" />
-                                <Setter Property="attach:GlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBorder}}" />
                             </MultiDataTrigger.Setters>
                         </MultiDataTrigger>
                     </ControlTemplate.Triggers>
