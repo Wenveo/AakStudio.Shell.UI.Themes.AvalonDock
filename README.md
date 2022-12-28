@@ -57,7 +57,7 @@
 # ✨ Styles and Templates
 *All **AvalonDock Control's** Styles and Templates have an x:Key*.
 
-*So you can use **BasedOn** in **Style**, And change the properties of the control's style.* (See [App.xaml](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/7ceb0c39911c9c592183e30700f8baef02f797a2/DockingDemo/App.xaml))
+*So you can use **BasedOn** in **Style**, And change the properties of the control's style.* (See [App.xaml](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml))
 
 Before doing this, you need to merge a theme **ResourceDictionary** (Any Theme).
 ``` xml
