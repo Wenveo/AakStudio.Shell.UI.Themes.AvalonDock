@@ -19,7 +19,7 @@
         <Setter Property="attachs:WindowChromeAttach.EnableMinimize" Value="{Binding RelativeSource={RelativeSource Self}, Path=AllowMinimize}" />
         <Setter Property="attachs:CustomizeGlowWindowAttach.GlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorder}}" />
         <Setter Property="attachs:CustomizeGlowWindowAttach.NonActiveGlowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingToolWindowBorderInactive}}" />
-        <Setter Property="attachs:CustomizeGlowWindowAttach.IsActive" Value="{Binding RelativeSource={RelativeSource Self}, Path=Model.SinglePane.SelectedContent.IsActive}" />
+        <Setter Property="attachs:CustomizeGlowWindowAttach.IsActive" Value="{Binding RelativeSource={RelativeSource Self}, Path=IsActive}" />
         <Setter Property="shell:WindowChrome.WindowChrome" Value="{x:Null}" />
         <Setter Property="WindowChrome.WindowChrome" Value="{x:Null}" />
         <Setter Property="UseLayoutRounding" Value="True" />
