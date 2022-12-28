@@ -87,7 +87,10 @@
                     Tag="5" />
             </MenuItem>
         </Menu>
-        <DockingManager x:Name="dockingManager" Grid.Row="1">
+        <DockingManager
+            x:Name="dockingManager"
+            Grid.Row="1"
+            ShowSystemMenu="False">
             <LayoutRoot>
                 <LayoutPanel Orientation="Horizontal">
                     <LayoutDocumentPaneGroup>
