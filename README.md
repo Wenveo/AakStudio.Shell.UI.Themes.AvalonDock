@@ -3,6 +3,7 @@
 ***Aak.Shell.UI.Themes package for AvalonDock.***
 
 ![NetFramework](https://img.shields.io/badge/.Net%20Framework->=4.6.2-green) ![NetCore](https://img.shields.io/badge/.Net%20Core->=v3.1-blue)
+[![CodeQL](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml/badge.svg)](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml)
 
 ![Downloads](https://img.shields.io/nuget/dt/Aak.Shell.UI.Themes.AvalonDock) ![PackageVersion](https://img.shields.io/nuget/v/Aak.Shell.UI.Themes.AvalonDock)
 
