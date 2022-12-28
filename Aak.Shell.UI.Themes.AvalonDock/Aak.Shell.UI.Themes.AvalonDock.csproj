@@ -8,19 +8,20 @@
     <Version>4.71.1</Version>
     <AssemblyVersion>4.71.1</AssemblyVersion>
     <FileVersion>4.71.1</FileVersion>
-    <PackageVersion>4.71.1-stable</PackageVersion>
+    <PackageVersion>4.71.1</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <Authors>Noisrev</Authors>
     <Company>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</Company>
     <Description>
-		Aak.Shell.UI Themes for AvalonDock.
-		VisualStudio 2019 (Blue)
-		VisualStudio 2019 (Dark)
-		VisualStudio 2019 (Light)
-		VisualStudio 2022 (Blue)
-		VisualStudio 2022 (Dark)
-		VisualStudio 2022 (Light)
-	</Description>
+        Aak.Shell.UI Themes for AvalonDock.
+        VisualStudio 2019 (Blue)
+        VisualStudio 2019 (Dark)
+        VisualStudio 2019 (Light)
+        VisualStudio 2022 (Blue)
+        VisualStudio 2022 (Dark)
+        VisualStudio 2022 (Light)
+    </Description>
     <Copyright>Copyright © 2022</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</RepositoryUrl>
