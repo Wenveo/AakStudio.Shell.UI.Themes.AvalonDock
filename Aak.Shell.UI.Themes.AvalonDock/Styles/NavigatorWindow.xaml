@@ -34,7 +34,7 @@
     </Style>
 
     <Style x:Key="NavigatorWindowListBoxItemStyle" TargetType="ListBoxItem">
-        <Setter Property="FocusVisualStyle" Value="{StaticResource NavigatorWindowListBoxItemFocusVisual}" />
+        <Setter Property="FocusVisualStyle" Value="{DynamicResource NavigatorWindowListBoxItemFocusVisual}" />
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.NavigatorWindowForeground}}" />
@@ -76,6 +76,14 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="NavigatorWindowListBoxBaseStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="MaxHeight" Value="400" />
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource NavigatorWindowListBoxItemStyle}" />
+        <Setter Property="ItemTemplate" Value="{DynamicResource NavigatorWindowListBoxItemDataTemplate}" />
     </Style>
 
     <Style x:Key="NavigatorWindowBaseStyle" TargetType="{x:Type avalonDockControls:NavigatorWindow}">
@@ -157,14 +165,10 @@
                                         <ListBox
                                             x:Name="PART_AnchorableListBox"
                                             Grid.Row="1"
-                                            MaxHeight="400"
                                             AutomationProperties.Name="{x:Static avalonDockProperties:Resources.Active_ToolWindows}"
-                                            Background="Transparent"
-                                            BorderThickness="0"
-                                            ItemContainerStyle="{StaticResource NavigatorWindowListBoxItemStyle}"
-                                            ItemTemplate="{StaticResource NavigatorWindowListBoxItemDataTemplate}"
                                             ItemsSource="{Binding Anchorables}"
-                                            SelectedItem="{Binding SelectedAnchorable, Mode=TwoWay}" />
+                                            SelectedItem="{Binding SelectedAnchorable, Mode=TwoWay}"
+                                            Style="{DynamicResource NavigatorWindowListBoxBaseStyle}" />
                                     </Grid>
                                     <Grid Grid.Column="1" Margin="5">
                                         <Grid.RowDefinitions>
@@ -179,14 +183,10 @@
                                         <ListBox
                                             x:Name="PART_DocumentListBox"
                                             Grid.Row="1"
-                                            MaxHeight="400"
                                             AutomationProperties.Name="{x:Static avalonDockProperties:Resources.Active_Files}"
-                                            Background="Transparent"
-                                            BorderThickness="0"
-                                            ItemContainerStyle="{StaticResource NavigatorWindowListBoxItemStyle}"
-                                            ItemTemplate="{StaticResource NavigatorWindowListBoxItemDataTemplate}"
                                             ItemsSource="{Binding Documents}"
-                                            SelectedItem="{Binding SelectedDocument, Mode=TwoWay}">
+                                            SelectedItem="{Binding SelectedDocument, Mode=TwoWay}"
+                                            Style="{DynamicResource NavigatorWindowListBoxBaseStyle}">
                                             <ListBox.ItemsPanel>
                                                 <ItemsPanelTemplate>
                                                     <WrapPanel Orientation="Vertical" />
