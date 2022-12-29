@@ -9,12 +9,12 @@
 
  [![Bilibili](https://img.shields.io/badge/dynamic/json?color=ff69b4&label=bilibili&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D176863848)](https://space.bilibili.com/176863848)
 
-- VisualStudio 2019 (Blue)
-- VisualStudio 2019 (Dark)
-- VisualStudio 2019 (Light)
-- VisualStudio 2022 (Blue)
-- VisualStudio 2022 (Dark)
-- VisualStudio 2022 (Light)
+- Visual Studio 2019 Blue
+- Visual Studio 2019 Dark
+- Visual Studio 2019 Light
+- Visual Studio 2022 Blue
+- Visual Studio 2022 Dark
+- Visual Studio 2022 Light
 
 # 💡 Install
 - Install using NuGet Package Manager in Visual Studio.
