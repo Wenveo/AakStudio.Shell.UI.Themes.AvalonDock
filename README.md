@@ -131,4 +131,15 @@ Custom styles and templates don't work when using themes in **DockingManager**.
 </DockingManger>
 ```
 
+Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#✨-styles-and-templates)).
+
+And then, you can change the **DockingManager's** theme in code.
+
+(See [App.xaml](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml), [MainWindow.xaml.cs](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/MainWindow.xaml.cs))
+
+#  LICENSE
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 Email: Noisrev@outlook.com
