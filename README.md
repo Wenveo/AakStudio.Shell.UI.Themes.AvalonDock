@@ -111,7 +111,7 @@ And we can modify the **ItemTemplate** of **NavigatorWindow's List**.
 
 ![Screenshot4](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/4.png)
 
-# 📢 Known issue
+# 📢 Known Problems
 Custom styles and templates don't work when using themes in **DockingManager**.
 ``` xml
 <Style
