@@ -79,7 +79,7 @@ Then we change the properties of the **Document Floating Window** to allow minim
 </Style>
 ```
 
-And we can modify the **ItemTemplate** of **NavigatorWindow's List**.
+And we can change the **ItemTemplate** of **NavigatorWindow's List**.
 ``` xml
 <DataTemplate x:Key="NavigatorWindowListBoxItemDataTemplate">
     <Grid>
@@ -131,7 +131,7 @@ Custom styles and templates don't work when using themes in **DockingManager**.
 </DockingManger>
 ```
 
-Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#✨-styles-and-templates)).
+Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#-styles-and-templates)).
 
 And then, you can change the **DockingManager's** theme in code.
 
