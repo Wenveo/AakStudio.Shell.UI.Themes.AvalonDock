@@ -9,12 +9,12 @@
 
  [![Bilibili](https://img.shields.io/badge/dynamic/json?color=ff69b4&label=bilibili&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dbilibili%26queryKey%3D176863848)](https://space.bilibili.com/176863848)
 
-- VisualStudio 2019 (Blue)
-- VisualStudio 2019 (Dark)
-- VisualStudio 2019 (Light)
-- VisualStudio 2022 (Blue)
-- VisualStudio 2022 (Dark)
-- VisualStudio 2022 (Light)
+- Visual Studio 2019 Blue
+- Visual Studio 2019 Dark
+- Visual Studio 2019 Light
+- Visual Studio 2022 Blue
+- Visual Studio 2022 Dark
+- Visual Studio 2022 Light
 
 # 💡 Install
 - Install using NuGet Package Manager in Visual Studio.
@@ -79,7 +79,7 @@ Then we change the properties of the **Document Floating Window** to allow minim
 </Style>
 ```
 
-And we can modify the **ItemTemplate** of **NavigatorWindow's List**.
+And we can change the **ItemTemplate** of **NavigatorWindow's List**.
 ``` xml
 <DataTemplate x:Key="NavigatorWindowListBoxItemDataTemplate">
     <Grid>
@@ -111,7 +111,7 @@ And we can modify the **ItemTemplate** of **NavigatorWindow's List**.
 
 ![Screenshot4](https://raw.githubusercontent.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/main/Screenshots/4.png)
 
-# 📢 Known issue
+# 📢 Known Problems
 Custom styles and templates don't work when using themes in **DockingManager**.
 ``` xml
 <Style
@@ -131,7 +131,7 @@ Custom styles and templates don't work when using themes in **DockingManager**.
 </DockingManger>
 ```
 
-Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#✨-styles-and-templates)).
+Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#-styles-and-templates)).
 
 And then, you can change the **DockingManager's** theme in code.
 
