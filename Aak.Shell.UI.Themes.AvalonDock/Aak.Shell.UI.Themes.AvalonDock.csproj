@@ -5,10 +5,10 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <LangVersion>9.0</LangVersion>
-    <Version>4.71.1</Version>
-    <AssemblyVersion>4.71.1</AssemblyVersion>
-    <FileVersion>4.71.1</FileVersion>
-    <PackageVersion>4.71.1</PackageVersion>
+    <Version>4.71.1.1</Version>
+    <AssemblyVersion>4.71.1.1</AssemblyVersion>
+    <FileVersion>4.71.1.1</FileVersion>
+    <PackageVersion>4.71.1.1</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <Authors>Noisrev</Authors>
@@ -22,7 +22,7 @@
         VisualStudio 2022 (Dark)
         VisualStudio 2022 (Light)
     </Description>
-    <Copyright>Copyright © 2022</Copyright>
+    <Copyright>Copyright © 2023</Copyright>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
