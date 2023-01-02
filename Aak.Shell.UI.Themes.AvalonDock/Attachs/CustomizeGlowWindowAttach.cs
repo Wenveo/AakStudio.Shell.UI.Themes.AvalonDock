@@ -7,27 +7,41 @@ namespace Aak.Shell.UI.Themes.AvalonDock.Attachs
     {
         public static readonly DependencyProperty IsActiveProperty =
             DependencyProperty.RegisterAttached("IsActive", typeof(bool),
-                typeof(CustomizeGlowWindowAttach), new PropertyMetadata(false, OnIsActiveChangedCallback));
+                typeof(CustomizeGlowWindowAttach), new FrameworkPropertyMetadata(false, OnIsActiveChangedCallback));
 
         public static readonly DependencyProperty GlowBrushProperty =
             DependencyProperty.RegisterAttached("GlowBrush", typeof(SolidColorBrush),
                 typeof(CustomizeGlowWindowAttach), new FrameworkPropertyMetadata(Brushes.Transparent,
-                    FrameworkPropertyMetadataOptions.AffectsRender));
+                    FrameworkPropertyMetadataOptions.AffectsRender, OnGlowBrushChangedCallback));
 
         public static readonly DependencyProperty NonActiveGlowBrushProperty =
             DependencyProperty.RegisterAttached("NonActiveGlowBrush", typeof(SolidColorBrush),
                 typeof(CustomizeGlowWindowAttach), new FrameworkPropertyMetadata(Brushes.Transparent,
-                    FrameworkPropertyMetadataOptions.AffectsRender));
+                    FrameworkPropertyMetadataOptions.AffectsRender, OnGlowBrushChangedCallback));
 
         private static void OnIsActiveChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            if (d is Window && e.NewValue is bool b)
+            if (d is Window window && e.NewValue is bool b)
             {
-                var brush = b ? GetGlowBrush(d) : GetNonActiveGlowBrush(d);
-
-                d.GetOrAddBehavior(BehaviorFactory.CreateGlowWindowBehavior).GlowColor = brush.Color;
-                d.GetOrAddBehavior(BehaviorFactory.CreateGlowWindowBehavior).NonActiveGlowColor = brush.Color;
+                UpdateGlowBrush(window, b);
             }
+        }
+
+        private static void OnGlowBrushChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is Window window)
+            {
+                UpdateGlowBrush(window, GetIsActive(window));
+            }
+        }
+
+        private static void UpdateGlowBrush(Window window, bool isActive)
+        {
+            var brush = isActive ? GetGlowBrush(window) : GetNonActiveGlowBrush(window);
+
+            var glowWindowBehavior = window.GetOrAddBehavior(BehaviorFactory.CreateGlowWindowBehavior);
+            glowWindowBehavior.GlowColor = brush.Color;
+            glowWindowBehavior.NonActiveGlowColor = brush.Color;
         }
 
         public static bool GetIsActive(DependencyObject obj)
