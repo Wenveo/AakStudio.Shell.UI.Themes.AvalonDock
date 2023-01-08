@@ -35,7 +35,7 @@
 
     <Style x:Key="NavigatorWindowListBoxItemStyle" TargetType="ListBoxItem">
         <Setter Property="FocusVisualStyle" Value="{DynamicResource NavigatorWindowListBoxItemFocusVisual}" />
-        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.NavigatorWindowUnSelectedBackground}}" />
         <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.NavigatorWindowForeground}}" />
         <Setter Property="BorderThickness" Value="1" />

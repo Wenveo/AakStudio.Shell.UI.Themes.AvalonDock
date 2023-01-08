@@ -359,6 +359,10 @@
         x:Key="{x:Static reskeys:ResourceKeys.NavigatorWindowSelectedText}"
         options:Freeze="true"
         Color="#FFFFFF" />
+    <SolidColorBrush
+        x:Key="{x:Static reskeys:ResourceKeys.NavigatorWindowUnSelectedBackground}"
+        options:Freeze="true"
+        Color="#00EEEEF2" />
 
     <SolidColorBrush
         x:Key="{x:Static reskeys:ResourceKeys.DockingButtonStarBorderBrushKey}"

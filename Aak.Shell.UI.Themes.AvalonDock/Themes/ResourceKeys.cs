@@ -157,6 +157,7 @@ namespace Aak.Shell.UI.Themes.AvalonDock.Themes
         // Background of selected text in Navigator Window (AccentColor)
         public static readonly ComponentResourceKey NavigatorWindowSelectedBackground = new ComponentResourceKey(typeof(ResourceKeys), "NavigatorWindowSelectedBackground");
         public static readonly ComponentResourceKey NavigatorWindowSelectedText = new ComponentResourceKey(typeof(ResourceKeys), "NavigatorWindowSelectedText");
+        public static readonly ComponentResourceKey NavigatorWindowUnSelectedBackground = new ComponentResourceKey(typeof(ResourceKeys), "NavigatorWindowUnSelectedBackground");
 
         #region DockingBrushKeys
         // Defines the height and width of the docking indicator buttons that are shown when
