@@ -5,10 +5,10 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <LangVersion>9.0</LangVersion>
-    <Version>4.71.1.1</Version>
-    <AssemblyVersion>4.71.1.1</AssemblyVersion>
-    <FileVersion>4.71.1.1</FileVersion>
-    <PackageVersion>4.71.1.1</PackageVersion>
+    <Version>4.71.1.2</Version>
+    <AssemblyVersion>4.71.1.2</AssemblyVersion>
+    <FileVersion>4.71.1.2</FileVersion>
+    <PackageVersion>4.71.1.2</PackageVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <Authors>Noisrev</Authors>
