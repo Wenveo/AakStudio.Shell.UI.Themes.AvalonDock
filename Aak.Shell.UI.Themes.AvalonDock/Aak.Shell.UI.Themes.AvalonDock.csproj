@@ -43,7 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ControlzEx" Version="6.0.0-alpha0255" />
+    <PackageReference Include="ControlzEx" Version="6.0.0-alpha0270" />
     <PackageReference Include="Dirkster.AvalonDock" Version="4.71.1" />
   </ItemGroup>
     
