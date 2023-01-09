@@ -59,23 +59,19 @@
 
 *So you can use **BasedOn** in **Style**, And change the properties of the control's style.* (See [App.xaml](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml))
 
-Before doing this, you need to merge a theme **ResourceDictionary** (Any Theme).
-``` xml
-<ResourceDictionary.MergedDictionaries>
-    <ResourceDictionary Source="/Aak.Shell.UI.Themes.AvalonDock;component/Themes/VisualStudio2022/DarkTheme.xaml" />
-</ResourceDictionary.MergedDictionaries>
-```
 Then we change the properties of the **Document Floating Window** to allow minimization and show in **TaskBar** and separate from the **MainWindow**.
 ``` xml
-<!-- xmlns:avalonDockControls="https://github.com/Dirkster99/AvalonDock" -->
+<!-- Styles can be dynamically based using DynamicResourceStyle. -->
 
-<Style
-    x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}"
-    BasedOn="{StaticResource DocumentWellWindowBaseStyle}"
-    TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+<Style x:Key="CustomizeDocumentFloatingWindowStyle" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
     <Setter Property="AllowMinimize" Value="True" />
     <Setter Property="ShowInTaskbar" Value="True" />
     <Setter Property="OwnedByDockingManagerWindow" Value="False" />
+</Style>
+
+<Style x:Key="{x:Type LayoutDocumentFloatingWindowControl}" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
+    <Setter Property="local:DynamicResourceStyle.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
+    <Setter Property="local:DynamicResourceStyle.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
 </Style>
 ```
 
@@ -114,13 +110,15 @@ And we can change the **ItemTemplate** of **NavigatorWindow's List**.
 # 📢 Known Problems
 Custom styles and templates don't work when using themes in **DockingManager**.
 ``` xml
-<Style
-    x:Key="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}"
-    BasedOn="{StaticResource DocumentWellWindowBaseStyle}"
-    TargetType="{x:Type avalonDockControls:LayoutDocumentFloatingWindowControl}">
+<Style x:Key="CustomizeDocumentFloatingWindowStyle" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
     <Setter Property="AllowMinimize" Value="True" />
     <Setter Property="ShowInTaskbar" Value="True" />
     <Setter Property="OwnedByDockingManagerWindow" Value="False" />
+</Style>
+
+<Style x:Key="{x:Type LayoutDocumentFloatingWindowControl}" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
+    <Setter Property="local:DynamicResourceStyle.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
+    <Setter Property="local:DynamicResourceStyle.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
 </Style>
 
 <!-- If you set the theme in DockingManager. Then the above style will not work -->
@@ -131,11 +129,6 @@ Custom styles and templates don't work when using themes in **DockingManager**.
 </DockingManger>
 ```
 
-Therefore, you must merge a theme **ResourceDictionary** before you customize the styles ([✨ Styles and Templates](#-styles-and-templates)).
-
-And then, you can change the **DockingManager's** theme in code.
-
-(See [App.xaml](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml), [MainWindow.xaml.cs](https://github.com/Noisrev/Aak.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/MainWindow.xaml.cs))
 
 #  LICENSE
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
