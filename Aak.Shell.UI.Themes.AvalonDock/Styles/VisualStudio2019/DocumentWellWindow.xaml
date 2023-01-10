@@ -31,7 +31,6 @@
         <Setter Property="WindowChrome.WindowChrome" Value="{x:Null}" />
         <Setter Property="Background" Value="{DynamicResource {x:Static reskeys:ResourceKeys.FloatingDocumentWindowBackground}}" />
         <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="WindowStyle" Value="None" />
         <Setter Property="UseLayoutRounding" Value="True" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Template">
