@@ -1,6 +1,6 @@
-﻿using System.Reflection;
+﻿using ControlzEx.Behaviors;
 
-using ControlzEx.Behaviors;
+using System.Reflection;
 
 namespace Aak.Shell.UI.Themes.AvalonDock.Attachs
 {
@@ -21,7 +21,7 @@ namespace Aak.Shell.UI.Themes.AvalonDock.Attachs
                 AssociatedObject.Loaded -= AssociatedObject_Loaded;
 
                 var handleERASEBKGND = typeof(WindowChromeBehavior).GetField("handleERASEBKGND", BindingFlags.NonPublic | BindingFlags.Instance);
-                handleERASEBKGND.SetValue(this, false);
+                handleERASEBKGND?.SetValue(this, false);
             }
         }
 
