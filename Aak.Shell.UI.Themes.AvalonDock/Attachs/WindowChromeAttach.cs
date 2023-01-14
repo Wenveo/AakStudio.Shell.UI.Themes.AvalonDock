@@ -1,6 +1,6 @@
-﻿using ControlzEx.Behaviors;
+﻿using System.Windows;
 
-using System.Windows;
+using ControlzEx.Behaviors;
 
 namespace Aak.Shell.UI.Themes.AvalonDock.Attachs
 {
@@ -20,36 +20,34 @@ namespace Aak.Shell.UI.Themes.AvalonDock.Attachs
 
         static WindowChromeAttach()
         {
-            var defauleObject = BehaviorFactory.CreateWindowChromeBehavior();
-
             CornerPreferenceProperty =
                 DependencyProperty.RegisterAttached("CornerPreference", typeof(WindowCornerPreference),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.CornerPreference,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(WindowCornerPreference.Default,
                     FrameworkPropertyMetadataOptions.AffectsRender, OnCornerPreferenceChangedCallback));
 
             EnableMaxRestoreProperty =
                 DependencyProperty.RegisterAttached("EnableMaxRestore", typeof(bool),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.EnableMaxRestore,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(true,
                     FrameworkPropertyMetadataOptions.AffectsRender, OnEnableMaxRestoreChangedCallback));
 
             EnableMinimizeProperty =
                 DependencyProperty.RegisterAttached("EnableMinimize", typeof(bool),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.EnableMinimize,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(true,
                     FrameworkPropertyMetadataOptions.AffectsRender, OnEnableMinimizeChangedCallback));
 
             IgnoreTaskbarOnMaximizeProperty =
                 DependencyProperty.RegisterAttached("IgnoreTaskbarOnMaximize", typeof(bool),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.IgnoreTaskbarOnMaximize,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(false,
                     FrameworkPropertyMetadataOptions.AffectsRender, OnIgnoreTaskbarOnMaximizeChangedCallback));
 
             KeepBorderOnMaximizeProperty =
                 DependencyProperty.RegisterAttached("KeepBorderOnMaximize", typeof(bool),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.KeepBorderOnMaximize,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(true,
                     FrameworkPropertyMetadataOptions.AffectsRender, OnKeepBorderOnMaximizeChangedCallback));
 
             ResizeBorderThicknessProperty =
                 DependencyProperty.RegisterAttached("ResizeBorderThickness", typeof(Thickness),
-                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(defauleObject.ResizeBorderThickness,
+                    typeof(WindowChromeAttach), new FrameworkPropertyMetadata(WindowChromeBehavior.GetDefaultResizeBorderThickness(),
                     FrameworkPropertyMetadataOptions.AffectsRender, OnResizeBorderThicknessChangedCallback));
         }
 
