@@ -25,12 +25,12 @@
         <Authors>Noisrev</Authors>
         <Description>
             Aak.Shell.UI Themes for AvalonDock.
-            VisualStudio 2019 (Blue)
-            VisualStudio 2019 (Dark)
-            VisualStudio 2019 (Light)
-            VisualStudio 2022 (Blue)
-            VisualStudio 2022 (Dark)
-            VisualStudio 2022 (Light)
+                VisualStudio 2019 (Blue)
+                VisualStudio 2019 (Dark)
+                VisualStudio 2019 (Light)
+                VisualStudio 2022 (Blue)
+                VisualStudio 2022 (Dark)
+                VisualStudio 2022 (Light)
         </Description>
         <Summary>$(Description)</Summary>
         <Copyright>Copyright © 2022 - $([System.DateTime]::Today.ToString(yyyy))</Copyright>
@@ -38,6 +38,7 @@
         <Product>Aak.Shell.UI.Themes.AvalonDock</Product>
         <RootNamespace>Aak.Shell.UI.Themes.AvalonDock</RootNamespace>
         <PackageId>Aak.Shell.UI.Themes.AvalonDock</PackageId>
+		<PackageTags>WPF;XAML;UI;Theme;Visual Studio;Shell;Docking;Blue;Dark;Light;</PackageTags>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
