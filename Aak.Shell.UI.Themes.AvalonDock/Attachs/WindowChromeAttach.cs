@@ -1,4 +1,5 @@
 ﻿using ControlzEx.Behaviors;
+
 using System.Windows;
 
 namespace Aak.Shell.UI.Themes.AvalonDock.Attachs

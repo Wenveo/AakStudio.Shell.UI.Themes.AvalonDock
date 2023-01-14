@@ -1,4 +1,5 @@
 ﻿using AvalonDock.Themes;
+
 using System;
 
 // Aak.Shell.UI.Themes.AvalonDock

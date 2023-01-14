@@ -1,5 +1,7 @@
 ﻿using Aak.Shell.UI.Themes.AvalonDock;
+
 using AvalonDock.Themes;
+
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
