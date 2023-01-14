@@ -17,7 +17,7 @@
 - Visual Studio 2022 Light
 
 # 💡 Install
-- Install using NuGet Package Manager in Visual Studio.
+- Install in Visual Studio using NuGet Package Manager.
 - .NET CLI : `dotnet add package Aak.Shell.UI.Themes.AvalonDock`
 
 # 🚀 Quick Start
