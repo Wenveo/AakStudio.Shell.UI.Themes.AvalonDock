@@ -10,8 +10,8 @@
     Title="MainWindow"
     Width="1280"
     Height="720"
-    aakthemes:GlowWindowAttach.GlowBrush="{DynamicResource {x:Static avalondockThemes:ResourceKeys.FloatingDocumentWindowBorder}}"
-    aakthemes:GlowWindowAttach.NonActiveGlowBrush="{DynamicResource {x:Static avalondockThemes:ResourceKeys.FloatingDocumentWindowBorderInactive}}"
+    aakthemes:GlowWindowAttach.GlowBrush="{DynamicResource {x:Static aakthemes:ResourceKeys.FloatingDocumentWindowBorder}}"
+    aakthemes:GlowWindowAttach.NonActiveGlowBrush="{DynamicResource {x:Static aakthemes:ResourceKeys.FloatingDocumentWindowBorderInactive}}"
     BorderThickness="0"
     UseLayoutRounding="True"
     mc:Ignorable="d">
