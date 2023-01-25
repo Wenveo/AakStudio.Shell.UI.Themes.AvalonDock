@@ -1,6 +1,6 @@
-﻿using ControlzEx.Behaviors;
+﻿using System.Reflection;
 
-using System.Reflection;
+using ControlzEx.Behaviors;
 
 namespace AakStudio.Shell.UI.Themes.AvalonDock.Attachs
 {

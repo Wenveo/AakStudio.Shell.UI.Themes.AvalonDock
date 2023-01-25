@@ -1,10 +1,10 @@
-﻿using AvalonDock.Controls;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+
+using AvalonDock.Controls;
 
 namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
 {

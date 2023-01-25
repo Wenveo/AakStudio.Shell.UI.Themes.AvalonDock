@@ -1,9 +1,9 @@
-﻿using Microsoft.Xaml.Behaviors;
-
-using System;
+﻿using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
+
+using Microsoft.Xaml.Behaviors;
 
 namespace AakStudio.Shell.UI.Themes.AvalonDock.Attachs
 {

@@ -1,6 +1,6 @@
-﻿using AvalonDock.Themes;
+﻿using System;
 
-using System;
+using AvalonDock.Themes;
 
 namespace AakStudio.Shell.UI.Themes.AvalonDock
 {

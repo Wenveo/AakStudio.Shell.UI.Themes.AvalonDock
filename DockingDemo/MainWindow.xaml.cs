@@ -1,10 +1,10 @@
-﻿using AakStudio.Shell.UI.Themes.AvalonDock;
-
-using AvalonDock.Themes;
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+
+using AakStudio.Shell.UI.Themes.AvalonDock;
+
+using AvalonDock.Themes;
 
 namespace DockingDemo;
 /// <summary>
