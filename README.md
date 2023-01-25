@@ -97,7 +97,7 @@ And we can change the **ItemTemplate** of **NavigatorWindow's List**.
 ***See for other styles [AakStudio.Shell.UI.Themes.AvalonDock/Styles](https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/tree/main/AakStudio.Shell.UI.Themes.AvalonDock/Styles)***
 
 # 📷 Screenshots
-**(Form [Aak.Shell.UI.Showcase](https://github.com/Noisrev/Aak.Shell.UI))**
+**(Form [AakStudio.Shell.UI.Showcase](https://github.com/Noisrev/AakStudio.Shell.UI))**
 
 ![Screenshot1](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/1.png)
 
