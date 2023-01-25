@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net462;netcoreapp3.1;net5.0-windows</TargetFrameworks>
+        <UseWPF>true</UseWPF>
+        <LangVersion>9.0</LangVersion>
+        <Version>4.71.1.4</Version>
+        <AssemblyVersion>4.71.1.4</AssemblyVersion>
+        <FileVersion>4.71.1.4</FileVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <EnableWindowsTargeting>true</EnableWindowsTargeting>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DebugType>embedded</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>Noisrev</Authors>
+        <Description>
+            AakStudio.Shell.UI Themes for AvalonDock.
+            VisualStudio 2019 (Blue)
+            VisualStudio 2019 (Dark)
+            VisualStudio 2019 (Light)
+            VisualStudio 2022 (Blue)
+            VisualStudio 2022 (Dark)
+            VisualStudio 2022 (Light)
+        </Description>
+        <Summary>$(Description)</Summary>
+        <Copyright>Copyright © 2022 - $([System.DateTime]::Today.ToString(yyyy))</Copyright>
+        <AssemblyName>AakStudio.Shell.UI.Themes.AvalonDock</AssemblyName>
+        <Product>AakStudio.Shell.UI.Themes.AvalonDock</Product>
+        <RootNamespace>AakStudio.Shell.UI.Themes.AvalonDock</RootNamespace>
+        <PackageId>AakStudio.Shell.UI.Themes.AvalonDock</PackageId>
+        <PackageTags>WPF;XAML;UI;Theme;Visual Studio;Shell;Docking;Blue;Dark;Light;</PackageTags>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <RepositoryUrl>https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock</RepositoryUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <PackageVersion>4.71.1.4</PackageVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\LICENSE.txt">
+            <Pack>true</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\README.md">
+            <Pack>true</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ControlzEx" Version="6.0.0-alpha0272" />
+        <PackageReference Include="Dirkster.AvalonDock" Version="4.71.1" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework.StartsWith(net4))' == 'true' ">
+        <Reference Include="PresentationFramework.Aero" />
+    </ItemGroup>
+
+</Project>

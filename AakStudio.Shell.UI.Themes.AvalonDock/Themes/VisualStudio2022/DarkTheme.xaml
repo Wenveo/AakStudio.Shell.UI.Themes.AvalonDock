@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Themes/Brushes/VisualStudio2022/DarkBrushs.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VisualStudio2022.Templates.Styles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

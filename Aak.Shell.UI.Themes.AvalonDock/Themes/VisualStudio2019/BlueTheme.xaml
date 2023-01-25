@@ -1,6 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Aak.Shell.UI.Themes.AvalonDock;component/Themes/Brushes/VisualStudio2019/BlueBrushs.xaml" />
-        <ResourceDictionary Source="/Aak.Shell.UI.Themes.AvalonDock;component/Styles/VisualStudio2019.Templates.Styles.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>

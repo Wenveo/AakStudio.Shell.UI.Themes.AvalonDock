@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aak.Shell.UI.Themes.AvalonDock\Aak.Shell.UI.Themes.AvalonDock.csproj" />
+    <ProjectReference Include="..\AakStudio.Shell.UI.Themes.AvalonDock\AakStudio.Shell.UI.Themes.AvalonDock.csproj" />
   </ItemGroup>
 
 </Project>
