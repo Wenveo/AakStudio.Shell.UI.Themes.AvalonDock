@@ -6,21 +6,21 @@
     xmlns:reskeys="clr-namespace:AakStudio.Shell.UI.Themes.AvalonDock.Themes">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/AutoHideChannel.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ContextMenus.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/DataTemplates.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/DockTargetButton.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/DocumentWellPaneItem.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/GridResizerControl.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/NavigatorWindow.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/OverlayWindow.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellAnchor.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellAnchorGroup.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellAnchorSide.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellItem.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellPaneControl.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellPaneItem.xaml" />
-        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/ToolWellWindow.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/AutoHideChannel.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ContextMenus.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/DataTemplates.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/DockTargetButton.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/DocumentWellPaneItem.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/GridResizerControl.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/NavigatorWindow.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/OverlayWindow.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellAnchor.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellAnchorGroup.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellAnchorSide.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellItem.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellPaneControl.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellPaneItem.xaml" />
+        <ResourceDictionary Source="/AakStudio.Shell.UI.Themes.AvalonDock;component/Styles/VS/ToolWellWindow.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style
