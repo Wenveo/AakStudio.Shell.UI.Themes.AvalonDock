@@ -61,8 +61,6 @@
 
 Then we change the properties of the **Document Floating Window** to allow minimization and show in **TaskBar** and separate from the **MainWindow**.
 ``` xml
-<!-- Styles can be dynamic based on when using DynamicResourceStyle. -->
-
 <Style x:Key="CustomizeDocumentFloatingWindowStyle" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
     <Setter Property="AllowMinimize" Value="True" />
     <Setter Property="ShowInTaskbar" Value="True" />
