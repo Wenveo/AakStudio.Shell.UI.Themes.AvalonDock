@@ -185,8 +185,8 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Themes
         public static readonly ComponentResourceKey DockTargetButtonGlyphBackgroundBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonGlyphBackgroundBrushKey");
         public static readonly ComponentResourceKey DockTargetButtonGlyphBorderBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonGlyphBorderBrushKey");
         public static readonly ComponentResourceKey DockTargetButtonGlyphArrowBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonGlyphArrowBrushKey");
-        public static readonly ComponentResourceKey DockTargetButtonOutSideBackgroundBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonOutSideBackgroundBrushKey");
-        public static readonly ComponentResourceKey DockTargetButtonOutSideBorderBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonOutSideBorderBrushKey");
+        public static readonly ComponentResourceKey DockTargetButtonOuterBackgroundBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonOuterBackgroundBrushKey");
+        public static readonly ComponentResourceKey DockTargetButtonOuterBorderBrushKey = new ComponentResourceKey(typeof(ResourceKeys), "DockTargetButtonOuterBorderBrushKey");
 
         #endregion DockTargetButton BrushKeys
 

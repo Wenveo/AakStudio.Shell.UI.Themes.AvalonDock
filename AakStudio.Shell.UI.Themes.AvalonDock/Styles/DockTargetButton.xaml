@@ -41,8 +41,8 @@
         <Setter Property="GlyphBackground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonGlyphBackgroundBrushKey}}" />
         <Setter Property="GlyphBorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonGlyphBorderBrushKey}}" />
         <Setter Property="GlyphArrowBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonGlyphArrowBrushKey}}" />
-        <Setter Property="OutSideBackground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonOutSideBackgroundBrushKey}}" />
-        <Setter Property="OutSideBorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonOutSideBorderBrushKey}}" />
+        <Setter Property="OuterBackground" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonOuterBackgroundBrushKey}}" />
+        <Setter Property="OuterBorderBrush" Value="{DynamicResource {x:Static reskeys:ResourceKeys.DockTargetButtonOuterBorderBrushKey}}" />
 
         <Style.Triggers>
             <Trigger Property="IsTargeted" Value="true">
@@ -339,7 +339,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockLeft" />
-                    <Condition Property="IsOutSide" Value="true" />
+                    <Condition Property="IsOuter" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -348,8 +348,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ctrls:DockTargetButton">
                                 <Border
-                                    Background="{TemplateBinding OutSideBackground}"
-                                    BorderBrush="{TemplateBinding OutSideBorderBrush}"
+                                    Background="{TemplateBinding OuterBackground}"
+                                    BorderBrush="{TemplateBinding OuterBorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="{TemplateBinding CornerRadius}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -383,7 +383,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockTop" />
-                    <Condition Property="IsOutSide" Value="true" />
+                    <Condition Property="IsOuter" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -392,8 +392,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ctrls:DockTargetButton">
                                 <Border
-                                    Background="{TemplateBinding OutSideBackground}"
-                                    BorderBrush="{TemplateBinding OutSideBorderBrush}"
+                                    Background="{TemplateBinding OuterBackground}"
+                                    BorderBrush="{TemplateBinding OuterBorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="{TemplateBinding CornerRadius}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -427,7 +427,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockRight" />
-                    <Condition Property="IsOutSide" Value="true" />
+                    <Condition Property="IsOuter" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -436,8 +436,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ctrls:DockTargetButton">
                                 <Border
-                                    Background="{TemplateBinding OutSideBackground}"
-                                    BorderBrush="{TemplateBinding OutSideBorderBrush}"
+                                    Background="{TemplateBinding OuterBackground}"
+                                    BorderBrush="{TemplateBinding OuterBorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="{TemplateBinding CornerRadius}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
@@ -471,7 +471,7 @@
             <MultiTrigger>
                 <MultiTrigger.Conditions>
                     <Condition Property="TargetDock" Value="DockBottom" />
-                    <Condition Property="IsOutSide" Value="true" />
+                    <Condition Property="IsOuter" Value="true" />
                 </MultiTrigger.Conditions>
                 <MultiTrigger.Setters>
                     <Setter Property="Height" Value="40" />
@@ -480,8 +480,8 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ctrls:DockTargetButton">
                                 <Border
-                                    Background="{TemplateBinding OutSideBackground}"
-                                    BorderBrush="{TemplateBinding OutSideBorderBrush}"
+                                    Background="{TemplateBinding OuterBackground}"
+                                    BorderBrush="{TemplateBinding OuterBorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="{TemplateBinding CornerRadius}"
                                     SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"

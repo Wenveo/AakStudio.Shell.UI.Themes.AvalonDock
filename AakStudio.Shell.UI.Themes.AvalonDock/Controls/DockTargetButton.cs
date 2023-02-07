@@ -37,11 +37,11 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
         public static readonly DependencyProperty GlyphBackgroundProperty =
             DependencyProperty.Register(nameof(GlyphBackground), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
 
-        public static readonly DependencyProperty OutSideBorderBrushProperty =
-            DependencyProperty.Register(nameof(OutSideBorderBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+        public static readonly DependencyProperty OuterBorderBrushProperty =
+            DependencyProperty.Register(nameof(OuterBorderBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
 
-        public static readonly DependencyProperty OutSideBackgroundProperty =
-            DependencyProperty.Register(nameof(OutSideBackground), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+        public static readonly DependencyProperty OuterBackgroundProperty =
+            DependencyProperty.Register(nameof(OuterBackground), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty GlyphArrowBrushProperty =
             DependencyProperty.Register(nameof(GlyphArrowBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
@@ -49,8 +49,8 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
         public static readonly DependencyProperty IsTargetedProperty =
             DependencyProperty.Register(nameof(IsTargeted), typeof(bool), typeof(DockTargetButton), new PropertyMetadata(false));
 
-        public static readonly DependencyProperty IsOutSideProperty =
-            DependencyProperty.Register(nameof(IsOutSide), typeof(bool), typeof(DockTargetButton), new PropertyMetadata(false));
+        public static readonly DependencyProperty IsOuterProperty =
+            DependencyProperty.Register(nameof(IsOuter), typeof(bool), typeof(DockTargetButton), new PropertyMetadata(false));
 
         public DockTarget TargetDock
         {
@@ -82,16 +82,16 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
             set => SetValue(GlyphArrowBrushProperty, value);
         }
 
-        public Brush OutSideBorderBrush
+        public Brush OuterBorderBrush
         {
-            get => (Brush)GetValue(OutSideBorderBrushProperty);
-            set => SetValue(OutSideBorderBrushProperty, value);
+            get => (Brush)GetValue(OuterBorderBrushProperty);
+            set => SetValue(OuterBorderBrushProperty, value);
         }
 
-        public Brush OutSideBackground
+        public Brush OuterBackground
         {
-            get => (Brush)GetValue(OutSideBackgroundProperty);
-            set => SetValue(OutSideBackgroundProperty, value);
+            get => (Brush)GetValue(OuterBackgroundProperty);
+            set => SetValue(OuterBackgroundProperty, value);
         }
 
         public bool IsTargeted
@@ -100,10 +100,10 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
             set => SetValue(IsTargetedProperty, value);
         }
 
-        public bool IsOutSide
+        public bool IsOuter
         {
-            get => (bool)GetValue(IsOutSideProperty);
-            set => SetValue(IsOutSideProperty, value);
+            get => (bool)GetValue(IsOuterProperty);
+            set => SetValue(IsOuterProperty, value);
         }
 
         static DockTargetButton()

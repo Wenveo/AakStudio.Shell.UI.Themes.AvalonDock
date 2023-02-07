@@ -28,7 +28,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="true"
+                                IsOuter="true"
                                 TargetDock="DockLeft" />
 
                             <ctrls:DockTargetButton
@@ -37,7 +37,7 @@
                                 VerticalAlignment="Center"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="true"
+                                IsOuter="true"
                                 TargetDock="DockRight" />
 
                             <ctrls:DockTargetButton
@@ -46,7 +46,7 @@
                                 VerticalAlignment="Bottom"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="true"
+                                IsOuter="true"
                                 TargetDock="DockBottom" />
 
                             <ctrls:DockTargetButton
@@ -55,7 +55,7 @@
                                 VerticalAlignment="Top"
                                 HorizontalContentAlignment="Stretch"
                                 VerticalContentAlignment="Stretch"
-                                IsOutSide="true"
+                                IsOuter="true"
                                 TargetDock="DockBottom" />
                         </Grid>
 

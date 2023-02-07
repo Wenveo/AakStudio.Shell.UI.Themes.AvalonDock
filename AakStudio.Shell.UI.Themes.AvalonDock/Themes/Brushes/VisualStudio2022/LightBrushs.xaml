@@ -408,11 +408,11 @@
         options:Freeze="true"
         Color="#FF1E1E1E" />
     <SolidColorBrush
-        x:Key="{x:Static reskeys:ResourceKeys.DockTargetButtonOutSideBackgroundBrushKey}"
+        x:Key="{x:Static reskeys:ResourceKeys.DockTargetButtonOuterBackgroundBrushKey}"
         options:Freeze="true"
         Color="#FFE7E8EC" />
     <SolidColorBrush
-        x:Key="{x:Static reskeys:ResourceKeys.DockTargetButtonOutSideBorderBrushKey}"
+        x:Key="{x:Static reskeys:ResourceKeys.DockTargetButtonOuterBorderBrushKey}"
         options:Freeze="true"
         Color="#FFCCCEDB" />
 
