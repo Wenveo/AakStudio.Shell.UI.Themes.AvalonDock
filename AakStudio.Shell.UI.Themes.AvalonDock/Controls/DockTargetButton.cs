@@ -26,31 +26,40 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
         private static readonly List<DockTargetButton> DockTargets = new();
 
         public static readonly DependencyProperty TargetDockProperty =
-            DependencyProperty.Register(nameof(TargetDock), typeof(DockTarget), typeof(DockTargetButton), new PropertyMetadata(DockTarget.Center));
+            DependencyProperty.Register(nameof(TargetDock), typeof(DockTarget),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(DockTarget.Center));
 
         public static readonly DependencyProperty CornerRadiusProperty =
-            DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius), typeof(DockTargetButton), new PropertyMetadata(new CornerRadius(0)));
+            DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(new CornerRadius(0)));
 
         public static readonly DependencyProperty GlyphBorderBrushProperty =
-            DependencyProperty.Register(nameof(GlyphBorderBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+            DependencyProperty.Register(nameof(GlyphBorderBrush), typeof(Brush),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty GlyphBackgroundProperty =
-            DependencyProperty.Register(nameof(GlyphBackground), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+            DependencyProperty.Register(nameof(GlyphBackground), typeof(Brush),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty OuterBorderBrushProperty =
-            DependencyProperty.Register(nameof(OuterBorderBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+            DependencyProperty.Register(nameof(OuterBorderBrush), typeof(Brush),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty OuterBackgroundProperty =
-            DependencyProperty.Register(nameof(OuterBackground), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+            DependencyProperty.Register(nameof(OuterBackground), typeof(Brush),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty GlyphArrowBrushProperty =
-            DependencyProperty.Register(nameof(GlyphArrowBrush), typeof(Brush), typeof(DockTargetButton), new PropertyMetadata(Brushes.Transparent));
+            DependencyProperty.Register(nameof(GlyphArrowBrush), typeof(Brush),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(Brushes.Transparent));
 
         public static readonly DependencyProperty IsTargetedProperty =
-            DependencyProperty.Register(nameof(IsTargeted), typeof(bool), typeof(DockTargetButton), new PropertyMetadata(false));
+            DependencyProperty.Register(nameof(IsTargeted), typeof(bool),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(false));
 
         public static readonly DependencyProperty IsOuterProperty =
-            DependencyProperty.Register(nameof(IsOuter), typeof(bool), typeof(DockTargetButton), new PropertyMetadata(false));
+            DependencyProperty.Register(nameof(IsOuter), typeof(bool),
+                typeof(DockTargetButton), new FrameworkPropertyMetadata(false));
 
         public DockTarget TargetDock
         {

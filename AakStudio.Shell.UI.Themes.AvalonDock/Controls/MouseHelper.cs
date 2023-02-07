@@ -17,19 +17,19 @@ namespace AakStudio.Shell.UI.Themes.AvalonDock.Controls
             public int Y;
         }
 
-        private static bool GetPointWrap(out PointWrap point)
-        {
-            unsafe
-            {
-                fixed (PointWrap* ptr = &point)
-                {
-                    return GetCursorPos((System.Drawing.Point*)ptr) != IntPtr.Zero;
-                }
-            }
-        }
-
         public static Point GetMousePosition()
         {
+            static bool GetPointWrap(out PointWrap point)
+            {
+                unsafe
+                {
+                    fixed (PointWrap* ptr = &point)
+                    {
+                        return GetCursorPos((System.Drawing.Point*)ptr) != IntPtr.Zero;
+                    }
+                }
+            }
+
             if (GetPointWrap(out var point))
             {
                 return new Point(point.X, point.Y);
