@@ -4,9 +4,9 @@
         <TargetFrameworks>net462;netcoreapp3.1;net6.0-windows</TargetFrameworks>
         <UseWPF>true</UseWPF>
         <LangVersion>9.0</LangVersion>
-        <Version>4.71.2.0</Version>
-        <AssemblyVersion>4.71.2.0</AssemblyVersion>
-        <FileVersion>4.71.2.0</FileVersion>
+        <Version>4.72.0.0</Version>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
+        <FileVersion>$(Version)</FileVersion>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <EnableWindowsTargeting>true</EnableWindowsTargeting>
         <Nullable>enable</Nullable>
@@ -44,7 +44,7 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <RepositoryUrl>https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <PackageVersion>4.71.2.0</PackageVersion>
+        <PackageVersion>$(Version)</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
     </PropertyGroup>
