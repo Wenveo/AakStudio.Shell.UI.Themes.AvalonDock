@@ -42,7 +42,7 @@
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <RepositoryUrl>https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock</RepositoryUrl>
+        <RepositoryUrl>https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <PackageVersion>4.71.2.0</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
