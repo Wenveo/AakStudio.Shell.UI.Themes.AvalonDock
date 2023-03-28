@@ -3,7 +3,7 @@
 ***AakStudio.Shell.UI.Themes package for AvalonDock.***
 
 ![NetFramework](https://img.shields.io/badge/.Net%20Framework->=4.6.2-green) ![NetCore](https://img.shields.io/badge/.Net%20Core->=v3.1-blue)
-[![CodeQL](https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml/badge.svg)](https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml/badge.svg)](https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/actions/workflows/codeql.yml)
 
 ![Downloads](https://img.shields.io/nuget/dt/AakStudio.Shell.UI.Themes.AvalonDock) ![PackageVersion](https://img.shields.io/nuget/v/AakStudio.Shell.UI.Themes.AvalonDock)
 
@@ -57,7 +57,7 @@
 # ✨ Styles and Templates
 *All **AvalonDock Control's** Styles and Templates have an x:Key*.
 
-*So you can use **BasedOn** in **Style**, And change the properties of the control's style.* (See [App.xaml](https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml))
+*So you can use **BasedOn** in **Style**, And change the properties of the control's style.* (See [App.xaml](https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/blob/main/DockingDemo/App.xaml))
 
 Then we change the properties of the **Document Floating Window** to allow minimization and show in **TaskBar** and separate from the **MainWindow**.
 ``` xml
@@ -68,8 +68,8 @@ Then we change the properties of the **Document Floating Window** to allow minim
 </Style>
 
 <Style x:Key="{x:Type LayoutDocumentFloatingWindowControl}" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
-    <Setter Property="local:DynamicResourceStyle.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
-    <Setter Property="local:DynamicResourceStyle.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
+    <Setter Property="local:DynamicStyleProvider.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
+    <Setter Property="local:DynamicStyleProvider.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
 </Style>
 ```
 
@@ -89,21 +89,21 @@ And we can change the **ItemTemplate** of **NavigatorWindow's List**.
     </Grid>
 </DataTemplate>
 ```
-![NavWindowListItemTemplate](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/NavWindowListItemTemplate.png)
+![NavWindowListItemTemplate](https://raw.githubusercontent.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/NavWindowListItemTemplate.png)
 
 
-***See for other styles [AakStudio.Shell.UI.Themes.AvalonDock/Styles](https://github.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/tree/main/AakStudio.Shell.UI.Themes.AvalonDock/Styles)***
+***See for other styles [AakStudio.Shell.UI.Themes.AvalonDock/Styles](https://github.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/tree/main/AakStudio.Shell.UI.Themes.AvalonDock/Styles)***
 
 # 📷 Screenshots
-**(Form [AakStudio.Shell.UI.Showcase](https://github.com/Noisrev/AakStudio.Shell.UI))**
+**(Form [AakStudio.Shell.UI.Showcase](https://github.com/Wenveo/AakStudio.Shell.UI))**
 
-![Screenshot1](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/1.png)
+![Screenshot1](https://raw.githubusercontent.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/1.png)
 
-![Screenshot2](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/2.png)
+![Screenshot2](https://raw.githubusercontent.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/2.png)
 
-![Screenshot3](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/3.png)
+![Screenshot3](https://raw.githubusercontent.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/3.png)
 
-![Screenshot4](https://raw.githubusercontent.com/Noisrev/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/4.png)
+![Screenshot4](https://raw.githubusercontent.com/Wenveo/AakStudio.Shell.UI.Themes.AvalonDock/main/Screenshots/4.png)
 
 # 📢 Known Problems
 Custom styles and templates don't work when using themes in **DockingManager**.
@@ -133,4 +133,4 @@ Custom styles and templates don't work when using themes in **DockingManager**.
 
 
 
-Email: Noisrev@outlook.com
+Email: Wenveo@outlook.com
