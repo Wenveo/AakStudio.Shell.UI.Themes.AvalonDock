@@ -17,8 +17,8 @@
             </Style>
 
             <Style x:Key="{x:Type LayoutDocumentFloatingWindowControl}" TargetType="{x:Type LayoutDocumentFloatingWindowControl}">
-                <Setter Property="local:DynamicResourceStyle.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
-                <Setter Property="local:DynamicResourceStyle.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
+                <Setter Property="local:DynamicStyleProvider.BasedOn" Value="{DynamicResource DocumentWellWindowBaseStyle}" />
+                <Setter Property="local:DynamicStyleProvider.Derived" Value="{DynamicResource CustomizeDocumentFloatingWindowStyle}" />
             </Style>
 
             <!--<DataTemplate x:Key="NavigatorWindowListBoxItemDataTemplate">
